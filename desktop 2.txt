@@ -1,0 +1,33 @@
+769  vim /etc/sysconfig/selinux 
+  770   firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="192.168.43.175" service name="ssh" drop"
+  771  firewall-cmd --reload 
+  772  ip a
+  773  nmcli connection add type team con-name team0 ifname team0 config '{"runner":{"name": "activebackup"}}'
+  774  nmcli connection add type team-slave con-name ens37 ifname ens37 master team0 
+  775  nmcli connection add type team-slave con-name ens38 ifname ens38 master team0 
+  776  nmcli connection show 
+  777  systemctl restart network
+  778  nmcli connection show 
+  779  systemctl restart network
+  780  nmcli connection show 
+  781  teamdctl team0 state
+  782  nmcli connection modify team0 ipv4.addresses 192.168.43.97
+  783  nmcli connection modify team0 ipv4.method static
+  784  nmcli connection down team0 ; nmcli connection up team0 
+  785  nmcli connection up ens37
+  786  nmcli connection up ens38 
+  787  ip a
+  788  nmcli connection down ens37
+  789  nmcli connection up ens37
+  790  history
+  791  yum install nfs -y
+  792  mkdir /tmp/mynfs
+  793  mkdir /mnt/akon
+  794  vim /root/sec.sec
+  795  openssl genrsa -out server.key 2048
+  796  openssl req -new -key server.key -out example-ca.crt
+  797   openssl x509 -req -in example-ca.crt -signkey server.key -out server.crt
+  798  ls
+  799  cp server.crt /etc/pki/tls/certs/
+  800  cp example-ca.crt /etc/pki/tls/certs/
+  801  cp server.key /etc/pki/tls/private/

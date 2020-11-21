@@ -1,0 +1,2314 @@
+[root@server6 ~]# yum install nfs* -y
+Loaded plugins: fastestmirror, langpacks
+Existing lock /var/run/yum.pid: another copy is running as pid 4962.
+Another app is currently holding the yum lock; waiting for it to exit...
+  The other application is: PackageKit
+    Memory : 199 M RSS (1.5 GB VSZ)
+    Started: Sat Nov 21 16:44:24 2020 - 14:34 ago
+    State  : Sleeping, pid: 4962
+Another app is currently holding the yum lock; waiting for it to exit...
+  The other application is: PackageKit
+    Memory : 199 M RSS (1.5 GB VSZ)
+    Started: Sat Nov 21 16:44:24 2020 - 14:36 ago
+    State  : Sleeping, pid: 4962
+Loading mirror speeds from cached hostfile
+ * base: mirrors.nhanhoa.com
+ * extras: mirrors.nhanhoa.com
+ * updates: mirror.bizflycloud.vn
+Resolving Dependencies
+--> Running transaction check
+---> Package nfs-utils.x86_64 1:1.3.0-0.68.el7 will be installed
+---> Package nfs4-acl-tools.x86_64 0:0.3.3-20.el7 will be updated
+---> Package nfs4-acl-tools.x86_64 0:0.3.3-21.el7 will be an update
+---> Package nfsometer.noarch 0:1.7-1.el7 will be installed
+--> Processing Dependency: python-matplotlib for package: nfsometer-1.7-1.el7.noarch
+--> Processing Dependency: filebench for package: nfsometer-1.7-1.el7.noarch
+---> Package nfstest.noarch 0:2.1.5-1.el7 will be installed
+--> Running transaction check
+---> Package filebench.x86_64 0:1.4.9.1-3.el7 will be installed
+---> Package python-matplotlib.x86_64 0:1.2.0-16.el7 will be installed
+--> Processing Dependency: stix-math-fonts for package: python-matplotlib-1.2.0-16.el7.x86_64
+--> Processing Dependency: dvipng for package: python-matplotlib-1.2.0-16.el7.x86_64
+--> Processing Dependency: libagg.so.2()(64bit) for package: python-matplotlib-1.2.0-16.el7.x86_64
+--> Running transaction check
+---> Package agg.x86_64 0:2.5-18.el7 will be installed
+---> Package stix-math-fonts.noarch 0:1.1.0-5.el7 will be installed
+---> Package texlive-dvipng-bin.x86_64 2:svn26509.0-45.20130427_r30134.el7 will be installed
+--> Processing Dependency: tex-dvipng for package: 2:texlive-dvipng-bin-svn26509.0-45.20130427_r30134.el7.x86_64
+--> Running transaction check
+---> Package texlive-dvipng.noarch 2:svn26689.1.14-45.el7 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+===============================================================================================================================================================================
+ Package                                     Arch                            Version                                                       Repository                     Size
+===============================================================================================================================================================================
+Installing:
+ nfs-utils                                   x86_64                          1:1.3.0-0.68.el7                                              base                          412 k
+ nfsometer                                   noarch                          1.7-1.el7                                                     base                          133 k
+ nfstest                                     noarch                          2.1.5-1.el7                                                   base                          529 k
+Updating:
+ nfs4-acl-tools                              x86_64                          0.3.3-21.el7                                                  base                           48 k
+Installing for dependencies:
+ agg                                         x86_64                          2.5-18.el7                                                    base                          145 k
+ filebench                                   x86_64                          1.4.9.1-3.el7                                                 base                          116 k
+ python-matplotlib                           x86_64                          1.2.0-16.el7                                                  base                           26 M
+ stix-math-fonts                             noarch                          1.1.0-5.el7                                                   base                          286 k
+ texlive-dvipng                              noarch                          2:svn26689.1.14-45.el7                                        base                           45 k
+ texlive-dvipng-bin                          x86_64                          2:svn26509.0-45.20130427_r30134.el7                           base                           64 k
+
+Transaction Summary
+===============================================================================================================================================================================
+Install  3 Packages (+6 Dependent packages)
+Upgrade  1 Package
+
+Total download size: 28 M
+Downloading packages:
+No Presto metadata available for base
+^C/10): nfs-utils-1.3.0-0.68.el7.x86_64.rpm                               0% [                                                               ]  57 kB/s | 155 kB  00:08:13 ETA 
+
+Exiting on user cancel
+[root@server6 ~]# yum install nfs -y
+Loaded plugins: fastestmirror, langpacks
+Loading mirror speeds from cached hostfile
+ * base: mirrors.nhanhoa.com
+ * extras: mirrors.nhanhoa.com
+ * updates: mirror.horizon.vn
+No package nfs available.
+Error: Nothing to do
+[root@server6 ~]# 
+[root@server6 ~]# yum install nfs-utils* -y
+Loaded plugins: fastestmirror, langpacks
+Loading mirror speeds from cached hostfile
+ * base: mirrors.nhanhoa.com
+ * extras: mirrors.nhanhoa.com
+ * updates: mirrors.vhost.vn
+Resolving Dependencies
+--> Running transaction check
+---> Package nfs-utils.x86_64 1:1.3.0-0.68.el7 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+===============================================================================================================================================================================
+ Package                                   Arch                                   Version                                           Repository                            Size
+===============================================================================================================================================================================
+Installing:
+ nfs-utils                                 x86_64                                 1:1.3.0-0.68.el7                                  base                                 412 k
+
+Transaction Summary
+===============================================================================================================================================================================
+Install  1 Package
+
+Total download size: 412 k
+Installed size: 1.1 M
+Downloading packages:
+No Presto metadata available for base
+nfs-utils-1.3.0-0.68.el7.x86_64.rpm                                                                                                                     | 412 kB  00:00:03     
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : 1:nfs-utils-1.3.0-0.68.el7.x86_64                                                                                                                           1/1 
+  Verifying  : 1:nfs-utils-1.3.0-0.68.el7.x86_64                                                                                                                           1/1 
+
+Installed:
+  nfs-utils.x86_64 1:1.3.0-0.68.el7                                                                                                                                            
+
+Complete!
+[root@server6 ~]# 
+[root@server6 ~]# touch /concert/rr.txt
+[root@server6 ~]# mkdir /d
+data1/ dev/   
+[root@server6 ~]# mkdir /dockyard
+[root@server6 ~]# touch /dockyard/ttt.txt
+[root@server6 ~]# ls /dockyard/
+ttttttttttttttttttttt.txt  ttt.txt
+[root@server6 ~]# 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[root@server6 ~]# yum install httpd* -y
+Loaded plugins: fastestmirror, langpacks
+Loading mirror speeds from cached hostfile
+ * base: mirrors.nhanhoa.com
+ * extras: mirrors.viethosting.com
+ * updates: mirrors.viethosting.com
+Resolving Dependencies
+--> Running transaction check
+---> Package httpd.x86_64 0:2.4.6-97.el7.centos will be installed
+---> Package httpd-devel.x86_64 0:2.4.6-97.el7.centos will be installed
+---> Package httpd-manual.noarch 0:2.4.6-97.el7.centos will be installed
+---> Package httpd-tools.x86_64 0:2.4.6-97.el7.centos will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+===============================================================================================================================================================================
+ Package                                    Arch                                 Version                                           Repository                             Size
+===============================================================================================================================================================================
+Installing:
+ httpd                                      x86_64                               2.4.6-97.el7.centos                               updates                               2.7 M
+ httpd-devel                                x86_64                               2.4.6-97.el7.centos                               updates                               199 k
+ httpd-manual                               noarch                               2.4.6-97.el7.centos                               updates                               1.3 M
+ httpd-tools                                x86_64                               2.4.6-97.el7.centos                               updates                                93 k
+
+Transaction Summary
+===============================================================================================================================================================================
+Install  4 Packages
+
+Total download size: 4.3 M
+Installed size: 16 M
+Downloading packages:
+(1/4): httpd-tools-2.4.6-97.el7.centos.x86_64.rpm                                                                                                       |  93 kB  00:00:04     
+(2/4): httpd-devel-2.4.6-97.el7.centos.x86_64.rpm                                                                                                       | 199 kB  00:00:06     
+(3/4): httpd-2.4.6-97.el7.centos.x86_64.rpm                                                                                                             | 2.7 MB  00:00:32     
+(4/4): httpd-manual-2.4.6-97.el7.centos.noarch.rpm                                                                                                      | 1.3 MB  00:00:33     
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                                                          132 kB/s | 4.3 MB  00:00:33     
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : httpd-tools-2.4.6-97.el7.centos.x86_64                                                                                                                      1/4 
+  Installing : httpd-2.4.6-97.el7.centos.x86_64                                                                                                                            2/4 
+  Installing : httpd-devel-2.4.6-97.el7.centos.x86_64                                                                                                                      3/4 
+  Installing : httpd-manual-2.4.6-97.el7.centos.noarch                                                                                                                     4/4 
+  Verifying  : httpd-2.4.6-97.el7.centos.x86_64                                                                                                                            1/4 
+  Verifying  : httpd-tools-2.4.6-97.el7.centos.x86_64                                                                                                                      2/4 
+  Verifying  : httpd-devel-2.4.6-97.el7.centos.x86_64                                                                                                                      3/4 
+  Verifying  : httpd-manual-2.4.6-97.el7.centos.noarch                                                                                                                     4/4 
+
+Installed:
+  httpd.x86_64 0:2.4.6-97.el7.centos    httpd-devel.x86_64 0:2.4.6-97.el7.centos    httpd-manual.noarch 0:2.4.6-97.el7.centos    httpd-tools.x86_64 0:2.4.6-97.el7.centos   
+
+Complete!
+[root@server6 ~]# 
+[root@server6 ~]# echo "Hello redhat" > /var/www/html/index.html
+[root@server6 ~]# cp /usr/share/doc/httpd-2.4.6/httpd-vhosts.conf /etc/httpd/conf.d/one.conf
+[root@server6 ~]# vim /etc/httpd/conf.d/one.conf
+[root@server6 ~]# httpd -t
+Syntax OK
+[root@server6 ~]# firewall-cmd --permanent --add-port=80/tcp
+success
+[root@server6 ~]# firewall-cmd --permanent --add-service=htt[
+^[[AError: INVALID_SERVICE: 'htt[' not among existing services
+[root@server6 ~]# firewall-cmd --permanent --add-service=http
+success
+[root@server6 ~]# firewall-cmd --reload 
+success
+[root@server6 ~]# systemctl restart httpd
+[root@server6 ~]# curl http://
+curl: (6) Could not resolve host: http; Unknown error
+[root@server6 ~]# curl http://server6.example.com
+Hello redhat
+[root@server6 ~]# 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[root@server6 ~]# mkdir /var/www/html/notes
+[root@server6 ~]# touch /var/www/html/notes/redhat{1..10}.txt
+[root@server6 ~]# vim /etc/httpd/conf.d/one.conf
+[root@server6 ~]# httpd -t
+Syntax OK
+[root@server6 ~]# systemctl restart httpd
+[root@server6 ~]# curl http://server6.example.com/notes
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="http://server6.example.com/notes/">here</a>.</p>
+</body></html>
+[root@server6 ~]# 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[root@server6 ~]# vim /etc/httpd/conf.d/one.conf
+[root@server6 ~]# systemctl restart httpd
+[root@server6 ~]# cat /etc/hosts
+127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
+::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
+
+192.168.43.4  desktop6.example.com
+
+192.168.43.90 server6.example.com
+
+192.168.43.4 www6.example.com
+[root@server6 ~]# vim /etc/hosts
+[root@server6 ~]# systemctl restart httpd
+[root@server6 ~]# 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(reverse-i-search)`vim': ^Cm /etc/hosts
+[root@server6 ~]# cp /etc/httpd/conf.d/one.conf /etc/httpd/conf.d/two.conf
+[root@server6 ~]# vim /etc/httpd/conf.d/two.conf
+[root@server6 ~]# httpd -t
+Syntax OK
+[root@server6 ~]# systemctl restart httpd
+[root@server6 ~]# vim /etc/httpd/conf.d/two.conf
+[root@server6 ~]# systemctl restart httpd
+[root@server6 ~]# vim /etc/httpd/conf.d/two.conf
+[root@server6 ~]# systemctl restart httpd
+[root@server6 ~]# curl server6.example.com
+This is practice 
+[root@server6 ~]# 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[root@server6 ~]# semanage port -l | grep http
+http_cache_port_t              tcp      8080, 8118, 8123, 10001-10010
+http_cache_port_t              udp      3130
+http_port_t                    tcp      80, 81, 443, 488, 8008, 8009, 8443, 9000
+pegasus_http_port_t            tcp      5988
+pegasus_https_port_t           tcp      5989
+[root@server6 ~]# semanage port -a -t http_port_t -p tcp 8998
+[root@server6 ~]# vim /etc/httpd/conf/httpd.conf
+[root@server6 ~]# systemctl restart httpd
+[root@server6 ~]# curl webapp6.example.com:8998
+Hello World! this is rhce exam practice
+[root@server6 ~]# 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[root@server6 ~]# yum install iscsi* -y
+Loaded plugins: fastestmirror, langpacks
+Loading mirror speeds from cached hostfile
+ * base: mirrors.nhanhoa.com
+ * extras: mirrors.nhanhoa.com
+ * updates: mirrors.viethosting.com
+Resolving Dependencies
+--> Running transaction check
+---> Package iscsi-initiator-utils.x86_64 0:6.2.0.874-17.el7 will be updated
+---> Package iscsi-initiator-utils.x86_64 0:6.2.0.874-19.el7 will be an update
+---> Package iscsi-initiator-utils-devel.x86_64 0:6.2.0.874-19.el7 will be installed
+---> Package iscsi-initiator-utils-iscsiuio.x86_64 0:6.2.0.874-17.el7 will be updated
+---> Package iscsi-initiator-utils-iscsiuio.x86_64 0:6.2.0.874-19.el7 will be an update
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+===============================================================================================================================================================================
+ Package                                                   Arch                              Version                                     Repository                       Size
+===============================================================================================================================================================================
+Installing:
+ iscsi-initiator-utils-devel                               x86_64                            6.2.0.874-19.el7                            base                             91 k
+Updating:
+ iscsi-initiator-utils                                     x86_64                            6.2.0.874-19.el7                            base                            423 k
+ iscsi-initiator-utils-iscsiuio                            x86_64                            6.2.0.874-19.el7                            base                             94 k
+
+Transaction Summary
+===============================================================================================================================================================================
+Install  1 Package
+Upgrade  2 Packages
+
+Total size: 608 k
+Total download size: 514 k
+Downloading packages:
+No Presto metadata available for base
+(1/2): iscsi-initiator-utils-devel-6.2.0.874-19.el7.x86_64.rpm                                                                                          |  91 kB  00:00:02     
+(2/2): iscsi-initiator-utils-6.2.0.874-19.el7.x86_64.rpm                                                                                                | 423 kB  00:00:03     
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                                                          146 kB/s | 514 kB  00:00:03     
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Updating   : iscsi-initiator-utils-6.2.0.874-19.el7.x86_64                                                                                                               1/5 
+  Updating   : iscsi-initiator-utils-iscsiuio-6.2.0.874-19.el7.x86_64                                                                                                      2/5 
+  Installing : iscsi-initiator-utils-devel-6.2.0.874-19.el7.x86_64                                                                                                         3/5 
+  Cleanup    : iscsi-initiator-utils-6.2.0.874-17.el7.x86_64                                                                                                               4/5 
+  Cleanup    : iscsi-initiator-utils-iscsiuio-6.2.0.874-17.el7.x86_64                                                                                                      5/5 
+  Verifying  : iscsi-initiator-utils-iscsiuio-6.2.0.874-19.el7.x86_64                                                                                                      1/5 
+  Verifying  : iscsi-initiator-utils-6.2.0.874-19.el7.x86_64                                                                                                               2/5 
+  Verifying  : iscsi-initiator-utils-devel-6.2.0.874-19.el7.x86_64                                                                                                         3/5 
+  Verifying  : iscsi-initiator-utils-6.2.0.874-17.el7.x86_64                                                                                                               4/5 
+  Verifying  : iscsi-initiator-utils-iscsiuio-6.2.0.874-17.el7.x86_64                                                                                                      5/5 
+
+Installed:
+  iscsi-initiator-utils-devel.x86_64 0:6.2.0.874-19.el7                                                                                                                        
+
+Updated:
+  iscsi-initiator-utils.x86_64 0:6.2.0.874-19.el7                                   iscsi-initiator-utils-iscsiuio.x86_64 0:6.2.0.874-19.el7                                  
+
+Complete!
+[root@server6 ~]# 
+[root@server6 ~]# iscsiadm --mode discoverydb --type sendtargets --portal 192.168.1.10 --discover
+^Ciscsiadm: caught SIGINT, exiting...
+[root@server6 ~]# iscsiadm --mode discoverydb --type sendtargets --portal 192.168.43.4 --discover
+192.168.43.4:3260,1 iqn.2017-18.com.example.network6.system2
+[root@server6 ~]# iscsiadm --mode node --targetname iqn.2001-05.com.doe:test --portal 192.168.1.1:3260 --login
+iscsiadm: No records found
+[root@server6 ~]# iscsiadm --mode node --targetname iqn.2017-18.com.example.network6.system2 --portal 192.168.43.4:3260 --login
+Logging in to [iface: default, target: iqn.2017-18.com.example.network6.system2, portal: 192.168.43.4,3260] (multiple)
+Login to [iface: default, target: iqn.2017-18.com.example.network6.system2, portal: 192.168.43.4,3260] successful.
+[root@server6 ~]# lsblk
+NAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+sda      8:0    0   30G  0 disk 
+├─sda1   8:1    0  300M  0 part /boot
+├─sda2   8:2    0    2G  0 part [SWAP]
+└─sda3   8:3    0 17.7G  0 part /
+sdb      8:16   0    5G  0 disk 
+sdc      8:32   0    2G  0 disk 
+sr0     11:0    1 1024M  0 rom  
+[root@server6 ~]# iscsiadm --mode node --targetname iqn.2017-18.com.example.network6.system2 --portal 192.168.43.4:3260 --logout
+Logging out of session [sid: 1, target: iqn.2017-18.com.example.network6.system2, portal: 192.168.43.4,3260]
+Logout of [sid: 1, target: iqn.2017-18.com.example.network6.system2, portal: 192.168.43.4,3260] successful.
+[root@server6 ~]# lsblk
+NAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+sda      8:0    0   30G  0 disk 
+├─sda1   8:1    0  300M  0 part /boot
+├─sda2   8:2    0    2G  0 part [SWAP]
+└─sda3   8:3    0 17.7G  0 part /
+sdb      8:16   0    5G  0 disk 
+sr0     11:0    1 1024M  0 rom  
+[root@server6 ~]# iscsiadm --mode node --targetname iqn.2017-18.com.example.network6.system2 --portal 192.168.43.4:3260 --login
+Logging in to [iface: default, target: iqn.2017-18.com.example.network6.system2, portal: 192.168.43.4,3260] (multiple)
+Login to [iface: default, target: iqn.2017-18.com.example.network6.system2, portal: 192.168.43.4,3260] successful.
+[root@server6 ~]# 
+
+
+
+
+
+
+[root@server6 ~]# lsblk
+NAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+sda      8:0    0   30G  0 disk 
+├─sda1   8:1    0  300M  0 part /boot
+├─sda2   8:2    0    2G  0 part [SWAP]
+└─sda3   8:3    0 17.7G  0 part /
+sdb      8:16   0    5G  0 disk 
+sdc      8:32   0    2G  0 disk 
+sr0     11:0    1 1024M  0 rom  
+[root@server6 ~]# mkdir /shareddisk
+[root@server6 ~]# chmod 0644 /s
+sbin/       shareddisk/ smb.conf    srv/        sys/        
+[root@server6 ~]# chmod 0644 /shareddisk/
+[root@server6 ~]# fdisk 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[root@server6 ~]# fdisk /dev/sdc
+Welcome to fdisk (util-linux 2.23.2).
+
+Changes will remain in memory only, until you decide to write them.
+Be careful before using the write command.
+
+Device does not contain a recognized partition table
+Building a new DOS disklabel with disk identifier 0xeac9dfa5.
+
+Command (m for help): p
+
+Disk /dev/sdc: 2147 MB, 2147483648 bytes, 4194304 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 4194304 bytes
+Disk label type: dos
+Disk identifier: 0xeac9dfa5
+
+   Device Boot      Start         End      Blocks   Id  System
+
+Command (m for help): n
+Partition type:
+   p   primary (0 primary, 0 extended, 4 free)
+   e   extended
+Select (default p): p
+Partition number (1-4, default 1): 
+First sector (8192-4194303, default 8192): 
+Using default value 8192
+Last sector, +sectors or +size{K,M,G} (8192-4194303, default 4194303): +950M 
+Partition 1 of type Linux and of size 952 MiB is set
+
+Command (m for help): p
+
+Disk /dev/sdc: 2147 MB, 2147483648 bytes, 4194304 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 4194304 bytes
+Disk label type: dos
+Disk identifier: 0xeac9dfa5
+
+   Device Boot      Start         End      Blocks   Id  System
+/dev/sdc1            8192     1957887      974848   83  Linux
+
+Command (m for help): w
+The partition table has been altered!
+
+Calling ioctl() to re-read partition table.
+Syncing disks.
+[root@server6 ~]# partprobe /dev/sdc
+[root@server6 ~]# mkfs.ext4 /dev/sdc
+mke2fs 1.42.9 (28-Dec-2013)
+/dev/sdc is entire device, not just one partition!
+Proceed anyway? (y,n) ^[[A^[[A^[[B^C
+[root@server6 ~]# mkfs.ext4 /dev/sdc1
+mke2fs 1.42.9 (28-Dec-2013)
+Filesystem label=
+OS type: Linux
+Block size=4096 (log=2)
+Fragment size=4096 (log=2)
+Stride=0 blocks, Stripe width=1024 blocks
+60928 inodes, 243712 blocks
+12185 blocks (5.00%) reserved for the super user
+First data block=0
+Maximum filesystem blocks=249561088
+8 block groups
+32768 blocks per group, 32768 fragments per group
+7616 inodes per group
+Superblock backups stored on blocks: 
+	32768, 98304, 163840, 229376
+
+Allocating group tables: done                            
+Writing inode tables: done                            
+Creating journal (4096 blocks): done
+Writing superblocks and filesystem accounting information: done
+
+[root@server6 ~]# blkid /dev/sdc1
+/dev/sdc1: UUID="452624b8-6452-43b7-a370-692b165b8d2c" TYPE="ext4" 
+[root@server6 ~]# 
+[root@server6 ~]# vim /etc/fstab 
+[root@server6 ~]# mount -av
+/                        : ignored
+/boot                    : already mounted
+swap                     : ignored
+mount: /shareddisk does not contain SELinux labels.
+       You just mounted an file system that supports labels which does not
+       contain labels, onto an SELinux box. It is likely that confined
+       applications will generate AVC messages and not be allowed access to
+       this file system.  For more details see restorecon(8) and mount(8).
+/shareddisk              : successfully mounted
+[root@server6 ~]# df -h
+Filesystem               Size  Used Avail Use% Mounted on
+devtmpfs                 895M     0  895M   0% /dev
+tmpfs                    910M   29M  882M   4% /dev/shm
+tmpfs                    910M   11M  900M   2% /run
+tmpfs                    910M     0  910M   0% /sys/fs/cgroup
+/dev/sda3                 18G  8.8G  9.0G  50% /
+/dev/sda1                297M  258M   39M  87% /boot
+tmpfs                    182M   28K  182M   1% /run/user/1000
+192.168.43.4:/tmp/mynfs   18G   17G  1.2G  94% /nfsdata
+/dev/sdc1                922M  2.4M  856M   1% /shareddisk
+[root@server6 ~]# 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[root@server6 ~]# vim /root/condition
+[root@server6 ~]# chmod +x /root/condition
+[root@server6 ~]# ./root/condition
+bash: ./root/condition: No such file or directory
+[root@server6 ~]# ./root/condition Linux
+bash: ./root/condition: No such file or directory
+[root@server6 ~]# cp /root/condition /root/condition.sh
+[root@server6 ~]# chmod +x /root/condition.sh 
+[root@server6 ~]# ./root/condition.sh Linx
+bash: ./root/condition.sh: No such file or directory
+[root@server6 ~]# ./root/condition.sh Linux
+bash: ./root/condition.sh: No such file or directory
+[root@server6 ~]# ls /
+bin  boot  concert  data1  dev  dockyard  etc  home  lib  lib64  media  mnt  nfsdata  opt  proc  root  run  sbin  shareddisk  smb.conf  srv  sys  tmp  usr  var
+[root@server6 ~]# ls /root
+abc3.sh  abc.sh  anaconda-ks.cfg  condition  condition.sh  original-ks.cfg  perl5
+[root@server6 ~]# sh /root/condition.sh 
+I love Fedora Linux. try it.
+[root@server6 ~]# chmod +x /root/condition.sh 
+[root@server6 ~]# ./root/condition.sh
+bash: ./root/condition.sh: No such file or directory
+[root@server6 ~]# sh /root/condition
+I love Fedora Linux. try it.
+[root@server6 ~]# 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[root@server6 ~]# sh /root/condition
+I love Fedora Linux. try it.
+[root@server6 ~]# sh /root/condition Linux
+RedHat
+[root@server6 ~]# sh /root/condition Fedora
+Linux
+[root@server6 ~]# 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[root@server6 ~]# vim /root/usersauto
+[root@server6 ~]# chmod +x /root/usersauto
+[root@server6 ~]# ls
+abc3.sh  abc.sh  anaconda-ks.cfg  condition  condition.sh  original-ks.cfg  perl5  username.txt  usersauto
+[root@server6 ~]# sh /root/usersauto username.txt
+[root@server6 ~]# cat /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+bin:x:1:1:bin:/bin:/sbin/nologin
+daemon:x:2:2:daemon:/sbin:/sbin/nologin
+adm:x:3:4:adm:/var/adm:/sbin/nologin
+lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin
+sync:x:5:0:sync:/sbin:/bin/sync
+shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown
+halt:x:7:0:halt:/sbin:/sbin/halt
+mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
+operator:x:11:0:operator:/root:/sbin/nologin
+games:x:12:100:games:/usr/games:/sbin/nologin
+ftp:x:14:50:FTP User:/var/ftp:/sbin/nologin
+nobody:x:99:99:Nobody:/:/sbin/nologin
+ods:x:999:999:softhsm private keys owner:/var/lib/softhsm:/sbin/nologin
+pegasus:x:66:65:tog-pegasus OpenPegasus WBEM/CIM services:/var/lib/Pegasus:/sbin/nologin
+systemd-network:x:192:192:systemd Network Management:/:/sbin/nologin
+dbus:x:81:81:System message bus:/:/sbin/nologin
+polkitd:x:998:997:User for polkitd:/:/sbin/nologin
+apache:x:48:48:Apache:/usr/share/httpd:/sbin/nologin
+colord:x:997:994:User for colord:/var/lib/colord:/sbin/nologin
+unbound:x:996:993:Unbound DNS resolver:/etc/unbound:/sbin/nologin
+gluster:x:995:992:GlusterFS daemons:/run/gluster:/sbin/nologin
+libstoragemgmt:x:994:991:daemon account for libstoragemgmt:/var/run/lsm:/sbin/nologin
+saslauth:x:993:76:Saslauthd user:/run/saslauthd:/sbin/nologin
+hsqldb:x:96:96::/var/lib/hsqldb:/sbin/nologin
+rpc:x:32:32:Rpcbind Daemon:/var/lib/rpcbind:/sbin/nologin
+saned:x:992:990:SANE scanner daemon user:/usr/share/sane:/sbin/nologin
+rpcuser:x:29:29:RPC Service User:/var/lib/nfs:/sbin/nologin
+amandabackup:x:33:6:Amanda user:/var/lib/amanda:/bin/bash
+abrt:x:173:173::/etc/abrt:/sbin/nologin
+tomcat:x:53:53:Apache Tomcat:/usr/share/tomcat:/sbin/nologin
+postfix:x:89:89::/var/spool/postfix:/sbin/nologin
+rtkit:x:172:172:RealtimeKit:/proc:/sbin/nologin
+pulse:x:171:171:PulseAudio System Daemon:/var/run/pulse:/sbin/nologin
+mysql:x:27:27:MariaDB Server:/var/lib/mysql:/sbin/nologin
+radvd:x:75:75:radvd user:/:/sbin/nologin
+chrony:x:991:986::/var/lib/chrony:/sbin/nologin
+qemu:x:107:107:qemu user:/:/sbin/nologin
+tss:x:59:59:Account used by the trousers package to sandbox the tcsd daemon:/dev/null:/sbin/nologin
+usbmuxd:x:113:113:usbmuxd user:/:/sbin/nologin
+geoclue:x:990:984:User for geoclue:/var/lib/geoclue:/sbin/nologin
+ntp:x:38:38::/etc/ntp:/sbin/nologin
+sssd:x:989:983:User for sssd:/:/sbin/nologin
+dirsrv:x:988:982:user for 389-ds-base:/usr/share/dirsrv:/sbin/nologin
+pkiuser:x:17:17:Certificate System:/usr/share/pki:/sbin/nologin
+setroubleshoot:x:987:981::/var/lib/setroubleshoot:/sbin/nologin
+named:x:25:25:Named:/var/named:/sbin/nologin
+gdm:x:42:42::/var/lib/gdm:/sbin/nologin
+gnome-initial-setup:x:986:980::/run/gnome-initial-setup/:/sbin/nologin
+pcp:x:985:979:Performance Co-Pilot:/var/lib/pcp:/sbin/nologin
+kdcproxy:x:984:978:IPA KDC Proxy User:/:/sbin/nologin
+ipaapi:x:983:977:IPA Framework User:/:/sbin/nologin
+sshd:x:74:74:Privilege-separated SSH:/var/empty/sshd:/sbin/nologin
+avahi:x:70:70:Avahi mDNS/DNS-SD Stack:/var/run/avahi-daemon:/sbin/nologin
+postgres:x:26:26:PostgreSQL Server:/var/lib/pgsql:/bin/bash
+dovecot:x:97:97:Dovecot IMAP server:/usr/libexec/dovecot:/sbin/nologin
+dovenull:x:982:976:Dovecot's unauthorized user:/usr/libexec/dovecot:/sbin/nologin
+tcpdump:x:72:72::/:/sbin/nologin
+oprofile:x:16:16:Special user account to be used by OProfile:/var/lib/oprofile:/sbin/nologin
+santosh:x:1000:1000:santosh:/home/santosh:/bin/bash
+windows:x:1003:1003::/home/windows:/bin/bash
+nfsnobody:x:65534:65534:Anonymous NFS User:/var/lib/nfs:/sbin/nologin
+samual:x:1004:1004::/home/samual:/bin/bash
+mitchel:x:1005:1005::/home/mitchel:/bin/bash
+catherine:x:1006:1006::/home/catherine:/bin/bash
+Raj:x:1007:1007::/home/Raj:/sbin/login
+Rushi:x:1008:1008::/home/Rushi:/sbin/login
+Omkar:x:1009:1009::/home/Omkar:/sbin/login
+Kunver:x:1010:1010::/home/Kunver:/sbin/login
+Pratik:x:1011:1011::/home/Pratik:/sbin/login
+[root@server6 ~]# 
+[root@server6 ~]# yum install mariadb* -y
+Loaded plugins: fastestmirror, langpacks
+Loading mirror speeds from cached hostfile
+ * base: mirrors.nhanhoa.com
+ * extras: mirrors.nhanhoa.com
+ * updates: mirrors.viethosting.com
+Resolving Dependencies
+--> Running transaction check
+---> Package mariadb.x86_64 1:5.5.68-1.el7 will be installed
+---> Package mariadb-bench.x86_64 1:5.5.68-1.el7 will be installed
+---> Package mariadb-devel.x86_64 1:5.5.68-1.el7 will be installed
+---> Package mariadb-embedded.x86_64 1:5.5.68-1.el7 will be installed
+---> Package mariadb-embedded-devel.x86_64 1:5.5.68-1.el7 will be installed
+---> Package mariadb-libs.x86_64 1:5.5.68-1.el7 will be installed
+---> Package mariadb-server.x86_64 1:5.5.68-1.el7 will be installed
+--> Processing Dependency: perl-DBD-MySQL for package: 1:mariadb-server-5.5.68-1.el7.x86_64
+---> Package mariadb-test.x86_64 1:5.5.68-1.el7 will be installed
+--> Running transaction check
+---> Package perl-DBD-MySQL.x86_64 0:4.023-6.el7 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+===============================================================================================================================================================================
+ Package                                             Arch                                Version                                       Repository                         Size
+===============================================================================================================================================================================
+Installing:
+ mariadb                                             x86_64                              1:5.5.68-1.el7                                base                              8.8 M
+ mariadb-bench                                       x86_64                              1:5.5.68-1.el7                                base                              389 k
+ mariadb-devel                                       x86_64                              1:5.5.68-1.el7                                base                              757 k
+ mariadb-embedded                                    x86_64                              1:5.5.68-1.el7                                base                              3.6 M
+ mariadb-embedded-devel                              x86_64                              1:5.5.68-1.el7                                base                              7.4 M
+ mariadb-libs                                        x86_64                              1:5.5.68-1.el7                                base                              760 k
+ mariadb-server                                      x86_64                              1:5.5.68-1.el7                                base                               11 M
+ mariadb-test                                        x86_64                              1:5.5.68-1.el7                                base                              8.2 M
+Installing for dependencies:
+ perl-DBD-MySQL                                      x86_64                              4.023-6.el7                                   base                              140 k
+
+Transaction Summary
+===============================================================================================================================================================================
+Install  8 Packages (+1 Dependent package)
+
+Total download size: 41 M
+Installed size: 283 M
+Downloading packages:
+(1/9): mariadb-bench-5.5.68-1.el7.x86_64.rpm                                                                                                            | 389 kB  00:00:03     
+(2/9): mariadb-devel-5.5.68-1.el7.x86_64.rpm                                                                                                            | 757 kB  00:00:16     
+(3/9): mariadb-libs-5.5.68-1.el7.x86_64.rpm                                                                                                             | 760 kB  00:00:41     
+mariadb-embedded-5.5.68-1.el7. FAILED                                          ======================================                        ]  65 kB/s |  26 MB  00:04:03 ETA 
+http://centos.hbcse.tifr.res.in/centos/7.9.2009/os/x86_64/Packages/mariadb-embedded-5.5.68-1.el7.x86_64.rpm: [Errno 14] curl#18 - "transfer closed with 2268474 bytes remaining to read"
+Trying other mirror.
+(4/9): perl-DBD-MySQL-4.023-6.el7.x86_64.rpm                                                                                                            | 140 kB  00:00:08     
+(5/9): mariadb-5.5.68-1.el7.x86_64.rpm                                                                                                                  | 8.8 MB  00:04:19     
+(6/9): mariadb-embedded-devel-5.5.68-1.el7.x86_64.rpm                                                                                                   | 7.4 MB  00:04:52     
+(7/9): mariadb-embedded-5.5.68-1.el7.x86_64.rpm                                                                                                         | 3.6 MB  00:01:02     
+(8/9): mariadb-server-5.5.68-1.el7.x86_64.rpm                                                                                                           |  11 MB  00:05:02     
+(9/9): mariadb-test-5.5.68-1.el7.x86_64.rpm                                                                                                             | 8.2 MB  00:04:41     
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                                                          129 kB/s |  41 MB  00:05:26     
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : 1:mariadb-libs-5.5.68-1.el7.x86_64                                                                                                                          1/9 
+  Installing : 1:mariadb-5.5.68-1.el7.x86_64                                                                                                                               2/9 
+  Installing : 1:mariadb-devel-5.5.68-1.el7.x86_64                                                                                                                         3/9 
+  Installing : perl-DBD-MySQL-4.023-6.el7.x86_64                                                                                                                           4/9 
+  Installing : 1:mariadb-server-5.5.68-1.el7.x86_64                                                                                                                        5/9 
+  Installing : 1:mariadb-embedded-5.5.68-1.el7.x86_64                                                                                                                      6/9 
+  Installing : 1:mariadb-embedded-devel-5.5.68-1.el7.x86_64                                                                                                                7/9 
+  Installing : 1:mariadb-test-5.5.68-1.el7.x86_64                                                                                                                          8/9 
+  Installing : 1:mariadb-bench-5.5.68-1.el7.x86_64                                                                                                                         9/9 
+  Verifying  : 1:mariadb-bench-5.5.68-1.el7.x86_64                                                                                                                         1/9 
+  Verifying  : 1:mariadb-embedded-devel-5.5.68-1.el7.x86_64                                                                                                                2/9 
+  Verifying  : 1:mariadb-devel-5.5.68-1.el7.x86_64                                                                                                                         3/9 
+  Verifying  : 1:mariadb-libs-5.5.68-1.el7.x86_64                                                                                                                          4/9 
+  Verifying  : 1:mariadb-server-5.5.68-1.el7.x86_64                                                                                                                        5/9 
+  Verifying  : perl-DBD-MySQL-4.023-6.el7.x86_64                                                                                                                           6/9 
+  Verifying  : 1:mariadb-5.5.68-1.el7.x86_64                                                                                                                               7/9 
+  Verifying  : 1:mariadb-test-5.5.68-1.el7.x86_64                                                                                                                          8/9 
+  Verifying  : 1:mariadb-embedded-5.5.68-1.el7.x86_64                                                                                                                      9/9 
+
+Installed:
+  mariadb.x86_64 1:5.5.68-1.el7                    mariadb-bench.x86_64 1:5.5.68-1.el7     mariadb-devel.x86_64 1:5.5.68-1.el7      mariadb-embedded.x86_64 1:5.5.68-1.el7    
+  mariadb-embedded-devel.x86_64 1:5.5.68-1.el7     mariadb-libs.x86_64 1:5.5.68-1.el7      mariadb-server.x86_64 1:5.5.68-1.el7     mariadb-test.x86_64 1:5.5.68-1.el7        
+
+Dependency Installed:
+  perl-DBD-MySQL.x86_64 0:4.023-6.el7                                                                                                                                          
+
+Complete!
+[root@server6 ~]# 
+[root@server6 ~]# systemctl restart mariadb 
+[root@server6 ~]# systemctl enable mariadb 
+Created symlink from /etc/systemd/system/multi-user.target.wants/mariadb.service to /usr/lib/systemd/system/mariadb.service.
+[root@server6 ~]# 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[root@server6 ~]# mysql_secure_installation 
+
+NOTE: RUNNING ALL PARTS OF THIS SCRIPT IS RECOMMENDED FOR ALL MariaDB
+      SERVERS IN PRODUCTION USE!  PLEASE READ EACH STEP CAREFULLY!
+
+In order to log into MariaDB to secure it, we'll need the current
+password for the root user.  If you've just installed MariaDB, and
+you haven't set the root password yet, the password will be blank,
+so you should just press enter here.
+
+Enter current password for root (enter for none): 
+OK, successfully used password, moving on...
+
+Setting the root password ensures that nobody can log into the MariaDB
+root user without the proper authorisation.
+
+Set root password? [Y/n] Y
+New password: 
+Re-enter new password: 
+Password updated successfully!
+Reloading privilege tables..
+ ... Success!
+
+
+By default, a MariaDB installation has an anonymous user, allowing anyone
+to log into MariaDB without having to have a user account created for
+them.  This is intended only for testing, and to make the installation
+go a bit smoother.  You should remove them before moving into a
+production environment.
+
+Remove anonymous users? [Y/n] Y
+ ... Success!
+
+Normally, root should only be allowed to connect from 'localhost'.  This
+ensures that someone cannot guess at the root password from the network.
+
+Disallow root login remotely? [Y/n] Y
+ ... Success!
+
+By default, MariaDB comes with a database named 'test' that anyone can
+access.  This is also intended only for testing, and should be removed
+before moving into a production environment.
+
+Remove test database and access to it? [Y/n] Y
+ - Dropping test database...
+ ... Success!
+ - Removing privileges on test database...
+ ... Success!
+
+Reloading the privilege tables will ensure that all changes made so far
+will take effect immediately.
+
+Reload privilege tables now? [Y/n] Y
+ ... Success!
+
+Cleaning up...
+
+All done!  If you've completed all of the above steps, your MariaDB
+installation should now be secure.
+
+Thanks for using MariaDB!
+[root@server6 ~]# 
+[root@server6 ~]# mysql -uroot -psantosh
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 10
+Server version: 5.5.68-MariaDB MariaDB Server
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> create database engineering;
+Query OK, 1 row affected (0.00 sec)
+
+MariaDB [(none)]> use engineering;
+Database changed
+MariaDB [engineering]> create table manufacture(ID int(2), name varchar(20);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+MariaDB [engineering]> create table manufacture(ID int(2), name varchar(20)
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+MariaDB [engineering]> create table manufacture (ID int(2), name varchar(20);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+MariaDB [engineering]> create table manufacture (ID int(2), name varchar(20));
+Query OK, 0 rows affected (0.00 sec)
+
+MariaDB [engineering]> insert into manufacture values(1,'santosh');
+Query OK, 1 row affected (0.00 sec)
+
+MariaDB [engineering]> insert into manufacture values(2,'saurabh');
+Query OK, 1 row affected (0.00 sec)
+
+MariaDB [engineering]> 
+
+
+
+
+
+
+
+
+MariaDB [engineering]> help grant
+Name: 'GRANT'
+Description:
+Syntax:
+GRANT
+    priv_type [(column_list)]
+      [, priv_type [(column_list)]] ...
+    ON [object_type] priv_level
+    TO user_specification [, user_specification] ...
+    [REQUIRE {NONE | ssl_option [[AND] ssl_option] ...}]
+    [WITH with_option ...]
+
+GRANT PROXY ON user_specification
+    TO user_specification [, user_specification] ...
+    [WITH GRANT OPTION]
+
+object_type:
+    TABLE
+  | FUNCTION
+  | PROCEDURE
+
+priv_level:
+    *
+  | *.*
+  | db_name.*
+  | db_name.tbl_name
+  | tbl_name
+  | db_name.routine_name
+
+user_specification:
+    user
+    [
+        IDENTIFIED BY [PASSWORD] 'password'
+      | IDENTIFIED WITH auth_plugin [AS 'auth_string']
+    ]
+
+ssl_option:
+    SSL
+  | X509
+  | CIPHER 'cipher'
+  | ISSUER 'issuer'
+  | SUBJECT 'subject'
+
+with_option:
+    GRANT OPTION
+  | MAX_QUERIES_PER_HOUR count
+  | MAX_UPDATES_PER_HOUR count
+  | MAX_CONNECTIONS_PER_HOUR count
+  | MAX_USER_CONNECTIONS count
+
+The GRANT statement grants privileges to MySQL user accounts. GRANT
+also serves to specify other account characteristics such as use of
+secure connections and limits on access to server resources. To use
+GRANT, you must have the GRANT OPTION privilege, and you must have the
+privileges that you are granting.
+
+Normally, a database administrator first uses CREATE USER to create an
+account, then GRANT to define its privileges and characteristics. For
+example:
+
+CREATE USER 'jeffrey'@'localhost' IDENTIFIED BY 'mypass';
+GRANT ALL ON db1.* TO 'jeffrey'@'localhost';
+GRANT SELECT ON db2.invoice TO 'jeffrey'@'localhost';
+GRANT USAGE ON *.* TO 'jeffrey'@'localhost' WITH MAX_QUERIES_PER_HOUR 90;
+
+However, if an account named in a GRANT statement does not already
+exist, GRANT may create it under the conditions described later in the
+discussion of the NO_AUTO_CREATE_USER SQL mode.
+
+The REVOKE statement is related to GRANT and enables administrators to
+remove account privileges. See [HELP REVOKE].
+
+When successfully executed from the mysql program, GRANT responds with
+Query OK, 0 rows affected. To determine what privileges result from the
+operation, use SHOW GRANTS. See [HELP SHOW GRANTS].
+
+URL: http://dev.mysql.com/doc/refman/5.5/en/grant.html
+
+
+MariaDB [engineering]> #CREATE USER 'jeffrey'@'localhost' IDENTIFIED BY 'mypass';
+MariaDB [engineering]> #CREATE USER 'tom'@'localhost' IDENTIFIED BY 'fedora';
+MariaDB [engineering]> CREATE USER 'tom'@'localhost' IDENTIFIED BY 'fedora';
+Query OK, 0 rows affected (0.00 sec)
+
+MariaDB [engineering]> CREATE USER 'susan'@'%' IDENTIFIED BY 'fedora20';
+Query OK, 0 rows affected (0.00 sec)
+
+MariaDB [engineering]> CREATE USER 'christopher'@'%' IDENTIFIED BY 'password';
+Query OK, 0 rows affected (0.00 sec)
+
+MariaDB [engineering]> 
+MariaDB [engineering]> help grant
+Name: 'GRANT'
+Description:
+Syntax:
+GRANT
+    priv_type [(column_list)]
+      [, priv_type [(column_list)]] ...
+    ON [object_type] priv_level
+    TO user_specification [, user_specification] ...
+    [REQUIRE {NONE | ssl_option [[AND] ssl_option] ...}]
+    [WITH with_option ...]
+
+GRANT PROXY ON user_specification
+    TO user_specification [, user_specification] ...
+    [WITH GRANT OPTION]
+
+object_type:
+    TABLE
+  | FUNCTION
+  | PROCEDURE
+
+priv_level:
+    *
+  | *.*
+  | db_name.*
+  | db_name.tbl_name
+  | tbl_name
+  | db_name.routine_name
+
+user_specification:
+    user
+    [
+        IDENTIFIED BY [PASSWORD] 'password'
+      | IDENTIFIED WITH auth_plugin [AS 'auth_string']
+    ]
+
+ssl_option:
+    SSL
+  | X509
+  | CIPHER 'cipher'
+  | ISSUER 'issuer'
+  | SUBJECT 'subject'
+
+with_option:
+    GRANT OPTION
+  | MAX_QUERIES_PER_HOUR count
+  | MAX_UPDATES_PER_HOUR count
+  | MAX_CONNECTIONS_PER_HOUR count
+  | MAX_USER_CONNECTIONS count
+
+The GRANT statement grants privileges to MySQL user accounts. GRANT
+also serves to specify other account characteristics such as use of
+secure connections and limits on access to server resources. To use
+GRANT, you must have the GRANT OPTION privilege, and you must have the
+privileges that you are granting.
+
+Normally, a database administrator first uses CREATE USER to create an
+account, then GRANT to define its privileges and characteristics. For
+example:
+
+CREATE USER 'jeffrey'@'localhost' IDENTIFIED BY 'mypass';
+GRANT ALL ON db1.* TO 'jeffrey'@'localhost';
+GRANT SELECT ON db2.invoice TO 'jeffrey'@'localhost';
+GRANT USAGE ON *.* TO 'jeffrey'@'localhost' WITH MAX_QUERIES_PER_HOUR 90;
+
+However, if an account named in a GRANT statement does not already
+exist, GRANT may create it under the conditions described later in the
+discussion of the NO_AUTO_CREATE_USER SQL mode.
+
+The REVOKE statement is related to GRANT and enables administrators to
+remove account privileges. See [HELP REVOKE].
+
+When successfully executed from the mysql program, GRANT responds with
+Query OK, 0 rows affected. To determine what privileges result from the
+operation, use SHOW GRANTS. See [HELP SHOW GRANTS].
+
+URL: http://dev.mysql.com/doc/refman/5.5/en/grant.html
+
+
+MariaDB [engineering]> GRANT SELECT ON engineerinf.manufacture TO 'tom'@'localhost';
+ERROR 1146 (42S02): Table 'engineerinf.manufacture' doesn't exist
+MariaDB [engineering]> GRANT SELECT ON engineering.manufacture TO 'tom'@'localhost';
+Query OK, 0 rows affected (0.00 sec)
+
+MariaDB [engineering]> GRANT ALL ON engineering.manufacture TO 'susan'@'%';
+Query OK, 0 rows affected (0.00 sec)
+
+MariaDB [engineering]> GRANT ALL ON engineering.manufacture TO 'christopher'@'%';
+Query OK, 0 rows affected (0.00 sec)
+
+MariaDB [engineering]> 
+MariaDB [engineering]> history
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'history' at line 1
+MariaDB [engineering]> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+MariaDB [engineering]> Bye
+[root@server6 ~]# 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[root@server6 ~]# history
+   94  vi /etc/httpd/conf.d/one.conf 
+   95  systemctl restart httpd
+   96  vi /etc/httpd/conf/httpd.conf 
+   97  semanage port -l | grep http
+   98  vi /var/www/webapp/webapp.wsgi 
+   99  systemctl restart httpd
+  100  vi /etc/httpd/conf.d/one.conf 
+  101  httpd -t
+  102  firewall-cmd --list-all
+  103  firewall-cmd --permanent --remove-port=80/tcp
+  104  firewall-cmd --reload 
+  105  firewall-cmd --list-all
+  106  firewall-cmd --permanent --add-port=80/tcp
+  107  firewall-cmd --reload 
+  108  firewall-cmd --list-all
+  109  vi /etc/httpd/conf.d/one.conf 
+  110  cat /var/www/html/index.html 
+  111  systemctl restart httpd
+  112  clear
+  113  cp /usr/share/doc/httpd-2.4.6/httpd-vhosts.conf /etc/httpd/conf.d/test.conf
+  114  vi /etc/httpd/conf.d/test.conf
+  115  rm /etc/httpd/conf.d/one.conf 
+  116  httpd -t
+  117  vi /etc/httpd/conf.d/test.conf
+  118  httpd -t
+  119  systemctl restart httpd
+  120  vi /etc/httpd/conf.d/test.conf
+  121  systemctl restart httpd
+  122  yum install python
+  123  yum install python3
+  124  clear
+  125  rm -rf /var/www/webapp/
+  126  vi /var/www/html/info.php 
+  127  rm /etc/httpd/conf.d/test.conf 
+  128  vi /etc/httpd/conf.d/php.conf 
+  129  httpd -t
+  130  systemctl restart httpd
+  131  vi /var/www/html/info.php 
+  132  systemctl restart httpd
+  133  mv /var/www/html/info.php /var/www/html/index.php
+  134  ls /var/www/html/index.php 
+  135  cd
+  136  vi /etc/httpd/conf.d/test.conf
+  137  cp /etc/httpd/conf.d/php.conf 
+  138  cp /usr/share/doc/httpd-2.4.6/httpd-vhosts.conf /etc/httpd/conf.d/test.conf
+  139  vi /etc/httpd/conf.d/test.conf
+  140  mkdir /var/www/webapp
+  141  vi /var/www/webapp/webapp.wsgi
+  142  httpd -t
+  143  vi /etc/httpd/conf.d/test.conf
+  144  httpd -t
+  145  vi /etc/httpd/conf.d/test.conf
+  146  httpd -t
+  147  systemctl restart httpd
+  148  vi /etc/httpd/conf.d/test.conf
+  149  systemctl restart httpd
+  150  vi /etc/httpd/conf.d/test.conf
+  151  httpd -t
+  152  systemctl restart httpd
+  153  vi /etc/httpd/conf.d/test.conf
+  154  vi /var/www/webapp/webapp.wsgi
+  155  systemctl restart httpd
+  156  rm /etc/httpd/conf.d/php.conf 
+  157  systemctl restart httpd
+  158  vi /var/www/webapp/webapp.wsgi
+  159  systemctl restart httpd
+  160  cat /etc/httpd/conf.d/test.conf 
+  161  vi /etc/httpd/conf.d/test.conf 
+  162  systemctl restart httpd
+  163  vi /var/www/webapp/webapp.wsgi
+  164  systemctl restart httpd
+  165  vi /var/www/webapp/webapp.wsgi
+  166  systemctl restart httpd
+  167  vi /var/www/webapp/webapp.wsgi
+  168  systemctl restart httpd
+  169  vi /var/www/webapp/webapp.wsgi
+  170  systemctl restart httpd
+  171  vi /etc/httpd/conf.d/test.conf 
+  172  systemctl restart httpd
+  173  mkdir /var/www/webapp/secure
+  174  touch /var/www/webapp/secure/redhat{1..10}
+  175  clear
+  176  mkdir /var/www/php
+  177  cat > /var/www/php/index.php
+  178  cp /etc/httpd/conf.d/test.conf /etc/httpd/conf.d/test2.conf
+  179  vi /etc/httpd/conf.d/test2.conf
+  180  systemctl restart httpd
+  181  vi /etc/httpd/conf.d/test2.conf
+  182  vi /var/www/php/index.php
+  183  systemctl restart httpd
+  184  clear
+  185  cp /etc/httpd/conf.d/test.conf /home
+  186  rm /etc/httpd/conf.d/test.conf 
+  187  systemctl restart httpd
+  188  cp /var/www/webapp/ /home/
+  189  cp /var/www/webapp/webapp.wsgi /home/
+  190  rm -rf /var/www/webapp/
+  191  systemctl restart httpd
+  192  clear
+  193  cat /var/www/php/index.php 
+  194  cat > /var/www/php/index.php 
+  195  rm /etc/httpd/conf.d/test2.conf 
+  196  vi /etc/httpd/conf.d/test2.conf 
+  197  cd
+  198  systemctl restart httpd
+  199  clear
+  200  cat /var/www/php/index.php 
+  201  cat /etc/httpd/conf.d/test2.conf 
+  202  cat /etc/httpd/conf.d/welcome.conf 
+  203  vi /etc/httpd/conf.d/test2.conf 
+  204  firewall-cmd --list-all
+  205  vi /etc/httpd/conf/httpd.conf 
+  206  systemctl restart httpd
+  207  vi /etc/httpd/conf.d/test2.conf 
+  208  systemctl restart httpd
+  209  httpd -t
+  210  clear
+  211  vi /etc/httpd/conf.d/test2.conf 
+  212  cat /etc/httpd/conf.d/test2.conf 
+  213  cat /var/www/php/index.php 
+  214  vi /var/www/php/index.php 
+  215  systemctl restart httpd
+  216  cd
+  217  vi /etc/hosts
+  218  ip a
+  219  cd
+  220  clear
+  221  ls /
+  222  rm -rf /mydata/
+  223  vi /etc/samba/smb.conf
+  224  clear
+  225  mkdir /test
+  226  touch /test/redhat{1..5}
+  227  ls -Zd /tes
+  228  ls -Zd /test
+  229  semanage fcontext -a -t samba_share_t /test"(/.*)?"
+  230  restorecon -Rv /test/
+  231  ls -Zd /test
+  232  ls -Zd /test/redhat1 
+  233  lear
+  234  clear
+  235  useradd santosh
+  236  userdel santosh
+  237  sudo userdel santosh
+  238  systemctl restart smb nmb 
+  239  sudo userdel santosh
+  240  ps aux | grep 3059
+  241  killall -TERM -u santosh
+  242  cd
+  243  vi /etc/samba/smb.conf
+  244  systemctl restart smb nmb 
+  245  systemctl enable smb nmb 
+  246  cd /etc/samba/
+  247  ls
+  248  vi smb.conf
+  249  vi smb.conf.example 
+  250  vi smb.conf
+  251  rm smb.conf
+  252  cp /smb.conf /etc/samba/
+  253  vi /smb.conf 
+  254  useradd windows
+  255  smbpasswd -a windows
+  256  testparm -t
+  257  :cd
+  258  cd
+  259  vi /etc/samba/smb.conf 
+  260  mkdir /mydata
+  261  touch /mydata/redhat.txt{1..20}
+  262  ls /mydata/
+  263  clear
+  264  systemctl restart smb nmb 
+  265  systemctl enable smb nmb 
+  266  ip a
+  267  chmod 777 /mydata/
+  268  systemctl restart smb nmb 
+  269  vi /etc/samba/smb.conf 
+  270  ls -Zd /mydata/
+  271  semanage fcontext -a -t samba_share_t /mydata"(/.*)?"
+  272  restorecon -Rv /mydata/
+  273  ls -Zd /mydata/
+  274  systemctl restart smb nmb 
+  275  clear
+  276  cat /mydata/redhat.txt
+  277  ls /mydata/
+  278  cat /etc/samba/smb.conf
+  279  clear
+  280  ls /mydata/
+  281  ls
+  282  ls /mydata/
+  283  rm -rf /mydata
+  284  ls /
+  285  clear
+  286  mkdir /smbdata
+  287  chmod 777 /smbdata/
+  288  semanage fcontext -a -t samba_share_t /smbdata
+  289  restorecon -Rv /smbdata/
+  290  semanage fcontext -a -t samba_share_t /smbdata(/.*)?"
+  291  semanage fcontext -a -t samba_share_t /smbdata"(/.*)?"
+  292  restorecon -Rv /smbdata/
+  293  ls -Zd /smbdata/
+  294  touch /smbdata/redhat{1..25}
+  295  ls -Zd /smbdata/redhat1
+  296  clear
+  297  vi /etc/samba/smb.conf
+  298  systemctl restart smb nmb
+  299  testparm -t
+  300  vi /etc/samba/smb.conf
+  301  useradd raj
+  302  userdel raj
+  303  useradd raj
+  304  smbpasswd -a raj
+  305  useradd rushi
+  306  smbpasswd -a rushi
+  307  testparm -t
+  308  getsebool -a | grep samba
+  309  setsebool -P samba_export_all_ro on
+  310  setsebool -P samba_export_all_rw on
+  311  getsebool -a | grep samba
+  312  clear
+  313  systemctl restart smb nmb
+  314  firewall-cmd --list-all
+  315  clear
+  316  setfacl -m u:raj:rwx /smbdata
+  317  setfacl -m u:rushi:r-x /smbdata
+  318  clear
+  319  cat /etc/samba/smb.conf
+  320  ls /smbdata/
+  321  clear
+  322  ll /smbdata/
+  323  clear
+  324  ls /smbdata/
+  325  vi /etc/samba/smb.conf
+  326  systemctl restart smb nmb
+  327  cd
+  328  man mount
+  329  clear
+  330  mkdir /smbdata
+  331  rm -rf /smbdata
+  332  mkdir /smbdata
+  333  clear
+  334  chmod 777 /smbdata/
+  335  semanage fcontext -a -t samba_share_t "/smbdata(/.)?"
+  336  ls -Zd /smbdata/
+  337  restorecon -Rv /smbdata/
+  338  ls -Zd /smbdata/
+  339  clear
+  340  touch /smbdata/rhel7{1..15}
+  341  vi /etc/samba/smb.conf
+  342  testparm -t
+  343  systemctl restart smb nmb
+  344  ls /smbdata/
+  345  clear
+  346  cat /etc/samba/smb.conf -tail 10
+  347  cat /etc/samba/smb.conf 
+  348  clear
+  349  cat /etc/samba/smb.conf 
+  350  ls /smbdata/
+  351  vi /etc/samba/smb.conf 
+  352  systemctl restart smb nmb
+  353  rm -rf /smbdata/
+  354  cd
+  355  clear
+  356  cp /usr/share/doc/httpd-2.4.6/httpd-vhosts.conf /etc/httpd/conf.d/one.conf
+  357  clear
+  358  vi /etc/httpd/conf.d/one.conf
+  359  httpd -t
+  360  firewall-cmd --list-all
+  361  systemctl restart httpd 
+  362  cat > /var/www/html/index.html 
+  363  systemctl restart httpd 
+  364  vi /etc/httpd/conf.d/one.conf
+  365  vi /etc/httpd/conf/httpd.conf 
+  366  systemctl restart httpd 
+  367  mkdir /var/www/data1
+  368  cat > /var/www/data1/index.html
+  369  vi /etc/httpd/conf/httpd.conf 
+  370  vi /etc/httpd/conf.d/one.conf
+  371  systemctl restart httpd 
+  372  cat > /var/www/data1/myfile.html
+  373  vi /etc/httpd/conf.d/one.conf
+  374  systemctl restart httpd 
+  375  mkdir /var/www/data1/secure
+  376  touch /var/www/data1/secure/redhat{1..10}
+  377  vi /etc/httpd/conf.d/one.conf
+  378  systemctl restart httpd 
+  379  httpd -t
+  380  vi /etc/httpd/conf.d/one.conf
+  381  systemctl restart httpd 
+  382  httpd -t
+  383  systemctl restart httpd 
+  384  htpasswd -bc /var/www/data1/.mypass santosh santosh
+  385  vi /etc/httpd/conf.d/one.conf
+  386  httpd -t
+  387  systemctl restart httpd 
+  388  vi /etc/httpd/conf.d/one.conf
+  389  systemctl restart httpd 
+  390  vi /etc/httpd/conf.d/one.conf
+  391  systemctl restart httpd 
+  392  mkdir /data1
+  393  cat > /data1/index.html
+  394  vi /etc/httpd/conf.d/one.conf
+  395  httpd -t
+  396  ls -Zd /var/www/html/
+  397  semanage fcontext -a -t httpd_sys_content_t /data1
+  398  restorecon -Rv /data1/
+  399  ls -Zd /data1/
+  400  ls -Zd /data1/index.html 
+  401  systemctl restart httpd 
+  402  vi /etc/httpd/conf.d/one.conf
+  403  semanage port -l | grep http
+  404  semanage port --delete -t http_port_t -p tcp 28080/tcp
+  405  semanage port --delete -t http_port_t -p tcp 28080
+  406  semanage port -l | grep http
+  407  semanage port -a -t http_port_t -p tcp 28080
+  408  semanage port -l | grep http
+  409  clear
+  410  vi /etc/httpd/conf/httpd.conf 
+  411  systemctl restart httpd 
+  412  firewall-cmd --list-all
+  413  firewall-cmd --permanent --add-port=1241/tcp
+  414  firewall-cmd --reload 
+  415  firewall-cmd --list-all
+  416  firewall-cmd --permanent --remove-port=1241/tcp
+  417  firewall-cmd --list-all
+  418  firewall-cmd --reload 
+  419  firewall-cmd --list-all
+  420  firewall-cmd --permanent --add-rich-rule "rule family="ipv4" source address= "0.0.0.0/0" forward-port to-port="28080" protocol="tcp" port="1241""
+  421  firewall-cmd --permanent --add-rich-rule "rule family="ipv4" source address="0.0.0.0/0" forward-port to-port="28080" protocol="tcp" port="1241""
+  422  firewall-cmd --reload 
+  423  firewall-cmd --list-all
+  424  firewall-cmd --permanent --remove-rich-rule "rule family="ipv4" source address="0.0.0.0/0" forward-port to-port="28080" protocol="tcp" port="1241""
+  425  firewall-cmd --reload 
+  426  firewall-cmd --list-all
+  427  clear
+  428  vi /etc/httpd/conf/httpd.conf 
+  429  systemctl restart httpd 
+  430  vi /etc/httpd/conf.d/one.conf
+  431  systemctl restart httpd 
+  432  semanage port --delete -t http_port_t -p tcp 28080
+  433  semanage port -l | grep http
+  434  clear
+  435  rm -rf /var/www/data1/
+  436  rm -rf /data1/
+  437  clear
+  438  openssl genrsa -out server.key 2048
+  439  #openssl req -new -key server.key -out example-ca.csr
+  440  openssl req -new -key server.key -out example-ca.csr
+  441  openssl x509 -req -in example-ca.csr -signkey server.key -out server.crt
+  442  clear
+  443  ls
+  444  cp server.crt /etc/pki/tls/certs/
+  445  cp server.key /etc/pki/tls/private/
+  446  clear
+  447  nmcli connection add type team con-name india ifname india config '{"runner":{"name": "activebackup"}}'
+  448  nmcli connection add type team-slave con-name virat ifname ens37 master india 
+  449  nmcli connection add type team-slave con-name dhoni ifname ens38 master india 
+  450  nmcli connection show
+  451  systemctl restart network
+  452  nmcli connection show
+  453  clear
+  454  teamdctl state india
+  455  teamdctl india state
+  456  clear
+  457  nmcli connection modify india ipv4.addresses 192.168.81.81
+  458  nmcli connection modify india ipv4.addresses 192.168.81.81/24
+  459  nmcli connection modify india ipv4.method manual 
+  460  nmcli connection down india 
+  461  nmcli connection up india 
+  462  nmcli connection up virat 
+  463  nmcli connection up dhoni 
+  464  teamdctl india state
+  465  ping 192.168.81.81
+  466  nmcli connection delete type team con-name india ifname india config '{"runner":{"name": "activebackup"}}'
+  467  nmcli connection delete type team-slave con-name virat ifname ens37 master india 
+  468  nmcli connection delete type team-slave con-name dhoni ifname ens37 master india 
+  469  nmcli connection show
+  470  clear
+  471  yum install nfs nfs-utils
+  472  clear
+  473  yum installnfs-utils
+  474  yum install nfs-utils
+  475  clear
+  476  mkdir /nfs1
+  477  chmod 777 /nfs1/
+  478  vi /etc/exports
+  479  firewall-cmd --permanent --add-service=nfs
+  480  firewall-cmd --reload 
+  481  touch /nfs1/nfs{1..10}
+  482  vi /etc/exports
+  483  systemctl restart nfs
+  484  systemctl restart nfs-server
+  485  rm -rf /nfs1/
+  486  clear
+  487  mkdir /myydata
+  488  touch /myydata/nfs{1..10}
+  489  vi /etc/exports
+  490  systemctl restart nfs-service
+  491  systemctl restart nfs-server
+  492  firewall-cmd --permanent --add-service=nfs
+  493  firewall-cmd --reload 
+  494  rm -rf /myydata/
+  495  vi /etc/exports
+  496  reboot
+  497  cd
+  498  clear
+  499  yum install openssl
+  500  yum install mod_ssl httpd
+  501  clear
+  502  man req
+  503  man x509
+  504  cd /etc/httpd/conf.d/
+  505  ls
+  506  cp ssl.conf myssl.conf
+  507  vi myssl.conf 
+  508  ls
+  509  vi one.conf 
+  510  cd
+  511  httpd -t
+  512  systemctl restart httpd
+  513  rm /etc/httpd/conf.d/one.conf 
+  514  rm /etc/httpd/conf.d/myssl.conf 
+  515  cat /etc/httpd/conf.d/test2.conf 
+  516  rm /etc/httpd/conf.d/test2.conf 
+  517  ls /etc/httpd/conf.d/
+  518  clear
+  519  rm server.key 
+  520  rm server.crt 
+  521  rm example-ca.csr 
+  522  clear
+  523  ip a
+  524  cat /usr/share/doc/teamd-1.29/example_configs/activebackup_arp_ping_1.conf 
+  525  ip a
+  526  clear
+  527  cd
+  528  fdisk -l
+  529  clear
+  530  fdisk -l
+  531  fdisk /dev/sdb
+  532  clear
+  533  pvcreate /dev/sdb
+  534  vgcreate myvg /dev/sdb
+  535  lvcreate -l 50% -n mylv myvg
+  536  lvcreate -l 50%FREE -n mylv myvg
+  537  vgs
+  538  lvs
+  539  clear
+  540  fdisk -l
+  541  targetcli
+  542  systemctl restart target
+  543  systemctl enable target
+  544  firewall-cmd --permanent --add-port=3260/tcp
+  545  firewall-cmd --reload 
+  546  clear
+  547  systemctl restart iscsid
+  548  systemctl restart iscsi
+  549  firewall-cmd --permanent --remove-port=3260/tcp
+  550  targetcli
+  551  clear
+  552  systemctl restart iscsid
+  553  systemctl restart iscsi
+  554  firewall-cmd --reload 
+  555  firewall-cmd --list-all
+  556  clear
+  557  yum groupinstall mariadb -y
+  558  yum group install mariadb -y
+  559  yum groupinstall mariadb -y
+  560  clear
+  561  systemctl restart mariadb
+  562  systemctl enable mariadb
+  563  mysql_secure_installation 
+  564  mysql -uroot -psantosh
+  565  mysql -uom -psantosh
+  566  exit
+  567  cd
+  568  mysql -uomkar -psantosh
+  569  cd
+  570  mysql -uroot -psantosh
+  571  cd
+  572  targetcli 
+  573  systemctl restart iscsid
+  574  systemctl restart iscsi
+  575  fdisk -l
+  576  fdisk /dev/sdb
+  577  partprobe 
+  578  cd
+  579  clear
+  580  cp /usr/share/doc/httpd-2.4.6/httpd-vhosts.conf /etc/httpd/conf.d/one.conf
+  581  clear
+  582  vi clear
+  583  vi /etc/httpd/conf.d/one.conf
+  584  cat > /var/www/html/index.html 
+  585  systemctl restart httpd
+  586  mkdir /var/www/data1
+  587  cat > /var/www/data1/index.html
+  588  vi /etc/httpd/conf.d/one.conf
+  589  systemctl restart httpd
+  590  cat > /var/www/data1/myfile.html
+  591  vi /etc/httpd/conf.d/one.conf
+  592  systemctl restart httpd
+  593  rm -rf /var/www/data1/
+  594  mkdir /data12
+  595  cat > /data12/index.html
+  596  vi /etc/httpd/conf.d/one.conf
+  597  ls -Zd /var/www/html/
+  598  semanage fcontext -a -t httpd_sys_content_t /data12
+  599  restorecon -Rv /data12/
+  600  ls -Zd /data12/
+  601  clear
+  602  systemctl restart httpd
+  603  cat > /data12/index.html
+  604  vi /etc/httpd/conf.d/one.conf
+  605  systemctl restart httpd
+  606  clear
+  607  mkdir /data12/secure
+  608  touch /data12/secure/santosh{1..10}
+  609  vi /etc/httpd/conf.d/one.conf
+  610  systemctl restart httpd
+  611  httpd -t
+  612  vi /etc/httpd/conf.d/one.conf
+  613  systemctl restart httpd
+  614  htpasswd -bc /data12/.mypass santosh santosh
+  615  vi /etc/httpd/conf.d/one.conf
+  616  systemctl restart httpd
+  617  vi /etc/httpd/conf.d/one.conf
+  618  systemctl restart httpd
+  619  vi /etc/httpd/conf.d/one.conf
+  620  systemctl restart httpd
+  621  vi /etc/httpd/conf.d/one.conf
+  622  systemctl restart httpd
+  623  vi /etc/httpd/conf.d/one.conf
+  624  systemctl restart httpd
+  625  vi /etc/httpd/conf.d/one.conf
+  626  systemctl restart httpd
+  627  rm -rf //etc/httpd/conf.d/one.conf
+  628  clear
+  629  vi /etc/httpd/conf.d/one.conf
+  630  semanage port -l | grep http
+  631  semanage port -a -t http_port_t -p tcp 28080
+  632  semanage port -l | grep http
+  633  vi /etc/httpd/conf/httpd.conf 
+  634  systemctl restart httpd
+  635  httpd -t
+  636  vi /etc/httpd/conf/httpd.conf 
+  637  httpd -t
+  638  vi /etc/httpd/conf.d/one.conf
+  639  httpd -t
+  640  systemctl restart httpd
+  641  firewall-cmd --add-rich-rule "rule family="ipv4" source address = "0.0.0.0/0" forward-port to-port=28080protocol="tcp" port="1241""
+  642  firewall-cmd --add-rich-rule "rule family="ipv4" source address="0.0.0.0/0" forward-port to-port=28080protocol="tcp" port="1241""
+  643  firewall-cmd --add-rich-rule "rule family="ipv4" source address="0.0.0.0/0" forward-port to-port=28080 protocol="tcp" port="1241""
+  644  firewall-cmd --reload 
+  645  firewall-cmd --list-all
+  646  firewall-cmd --add-rich-rule "rule family="ipv4" source address="0.0.0.0/0" forward-port to-port=28080 protocol="tcp" port="1241""
+  647  firewall-cmd --list-all
+  648  firewall-cmd --reload 
+  649  firewall-cmd --list-all
+  650  firewall-cmd --permanent --add-rich-rule "rule family="ipv4" source address="0.0.0.0/0" forward-port to-port=28080 protocol="tcp" port="1241""
+  651  firewall-cmd --reload 
+  652  firewall-cmd --list-all
+  653  firewall-cmd --permanent --remove-rich-rule "rule family="ipv4" source address="0.0.0.0/0" forward-port to-port=28080 protocol="tcp" port="1241""
+  654  firewall-cmd --reload 
+  655  firewall-cmd --list-all
+  656  firewall-cmd --permanent --add-rich-rule "rule family="ipv4" source address="0.0.0.0/0" forward-port to-port="28080" protocol="tcp" port="1241""
+  657  firewall-cmd --reload 
+  658  firewall-cmd --list-all
+  659  ip a
+  660  firewall-cmd --reload 
+  661  firewall-cmd --list-all
+  662  systemctl restart httpd
+  663  firewall-cmd --permanent --remove-rich-rule "rule family="ipv4" source address="0.0.0.0/0" forward-port to-port="28080" protocol="tcp" port="1241""
+  664  firewall-cmd --list-all
+  665  firewall-cmd --reload 
+  666  firewall-cmd --list-all
+  667  firewall-cmd --permanent --add-port=28080/tcp
+  668  firewall-cmd --reload 
+  669  firewall-cmd --list-all
+  670  vi /etc/httpd/conf.d/one.conf
+  671  systemctl restart httpd
+  672  firewall-cmd --permanent --add-rich-rule "rule family="ipv4" source address="0.0.0.0/0" forward-port to-port="28080" protocol="tcp" port="1241""
+  673  firewall-cmd --reload 
+  674  firewall-cmd --list-all
+  675  firewall-cmd --permanent --remove-rich-rule "rule family="ipv4" source address="0.0.0.0/0" forward-port to-port="28080" protocol="tcp" port="1241""
+  676  firewall-cmd --permanent --remove-port=28080/tcp
+  677  firewall-cmd --reload 
+  678  firewall-cmd --list-all
+  679  clear
+  680  firewall-cmd --permanent --add-rich-rule "rule family="ipv4" source address="0.0.0.0/0" forward-port to-port="28080" protocol="tcp" port="1241""
+  681  firewall-cmd --reload 
+  682  firewall-cmd --list-all
+  683  firewall-cmd  --permanent --add-port=28080/tcp
+  684  firewall-cmd --reload 
+  685  firewall-cmd --list-all
+  686  firewall-cmd  --permanent --remove-port=28080/tcp
+  687  firewall-cmd --permanent --remove-rich-rule "rule family="ipv4" source address="0.0.0.0/0" forward-port to-port="28080" protocol="tcp" port="1241""
+  688  firewall-cmd --reload 
+  689  firewall-cmd --list-all
+  690  clear
+  691  #openssl genrsa -out key.pem 2048
+  692  openssl genrsa -out server.key 2048
+  693  #openssl req -new -key key.pem -out req.pem
+  694  #openssl req -new -key server.key -out example-ca.csr
+  695  openssl req -new -key server.key -out example-ca.csr
+  696  openssl x509 -req -in example-ca.csr -signkey server.key -out server.crt
+  697  clear
+  698  vi /etc/httpd/conf/httpd.conf 
+  699  vi /etc/httpd/conf.d/one.conf 
+  700  cp server.crt /etc/pki/tls/certs
+  701  cp server.crt /etc/pki/tls/certs/
+  702  cp server.key /etc/pki/tls/private/
+  703  rm /etc/pki/tls/private/server.key 
+  704  rm /etc/pki/tls/certs/server.crt 
+  705  clear
+  706  cd
+  707  clear
+  708  man req
+  709  man x509
+  710  clear
+  711  cd /etc/httpd/conf.d/
+  712  ls
+  713  cp ssl.conf myssl.conf
+  714  vi myssl.conf 
+  715  rm /etc/httpd/conf.d/one.conf 
+  716  systemctl restart httpd 
+  717  rm myssl.conf 
+  718  cd
+  719  clear
+  720  cd
+  721  clear
+  722  man req
+  723  man x509
+  724  clear
+  725  cd /etc/httpd/conf.d/cd
+  726  ls
+  727  cp ssl.conf myssl.conf
+  728  vi myssl.conf 
+  729  systemctl restart httpd 
+  730  cd
+  731  vi /etc/httpd/conf/httpd.conf 
+  732  systemctl restart httpd 
+  733  cd
+  734  yum groupinstall mariadb -y
+  735  yum group install mariadb -y
+  736  yum remove groupunintsall mariadb
+  737  yum groupunintsall mariadb
+  738  yum groupinstall mariadb -y
+  739  yum groupinstall mariadb
+  740  yum remove mariadb
+  741  yum remove mariadb mariadb-server
+  742  rm -rf /var/lib/mysql
+  743  rm /etc/my.cnf
+  744  yum remove MariaDB-server MariaDB-client
+  745  rpm -qa | grep mariadb
+  746  rpm -e --nodeps "mariadb-libs-5.5.56-2.el7.x86_64"
+  747  rpm -e --nodeps "mariadb-server-5.5.56-2.el7.x86_64"
+  748  rpm -e --nodeps "mariadb-5.5.56-2.el7.x86_64"
+  749  rm -f /var/log/mariadb
+  750  rm -f /var/log/mariadb/mariadb.log.rpmsave
+  751  rm -rf /var/lib/mysql
+  752  rm -rf /usr/lib64/mysql
+  753  rm -rf /usr/share/mysql
+  754  sudo systemctl stop mysqld.service && sudo yum remove -y mariadb mariadb-server && sudo rm -rf /var/lib/mysql /etc/my.cnf
+  755  sudo service mysql stop && sudo apt-get remove mariadb mariadb-server && sudo rm -rf /var/lib/mysql /etc/my.cnf
+  756  yum groupinstall mariadb
+  757  yum update
+  758  cd
+  759  man req
+  760  man x509
+  761  clear
+  762  cd /etc/httpd/conf.d/
+  763  ls
+  764  cp ssl.conf myssl.conf
+  765  vi myssl.conf 
+  766  systemctl restart httpd 
+  767  r myssl.conf 
+  768  rm myssl.conf
+  769  cd
+  770  rm server.key 
+  771  rm server.crt 
+  772  rm example-ca.csr 
+  773  clear
+  774  cd
+  775  cat /usr/share/doc/teamd-1.29/example_configs/activebackup_arp_ping_1.conf 
+  776  ip a
+  777  cd
+  778  clear
+  779  firewall-cmd --list-all
+  780  firewall-cmd --permanent --remove-service=samba
+  781  firewall-cmd --permanent --remove-service=nfs
+  782  firewall-cmd --permanent --remove-service=ssh
+  783  firewall-cmd --reload
+  784  semanage port -l | grep http
+  785  semanage port --delete -t http_port_t  -p tcp 28080
+  786  semanage port -l | grep http
+  787  clear
+  788  ls 
+  789  ls /
+  790  ls
+  791  rm server.crt 
+  792  rm server.key 
+  793  rm example-ca.csr 
+  794  ls
+  795  clear
+  796  yum install mariadb
+  797  yum groupinstall mariadb
+  798  yum install mariadb* -y
+  799  clear
+  800  cp /usr/share/doc/httpd-2.4.6/httpd-vhosts.conf /etc/httpd/conf.d/one.conf
+  801  vi /etc/httpd/conf.d/one.conf
+  802  httpd -t
+  803  firewall-cmd --permanent --add-port=80/tcp
+  804  firewall-cmd --reload \
+  805  firewall-cmd --reload 
+  806  systemctl restart httpd
+  807  clear
+  808  mkdir /var/www/data1
+  809  cat > /var/www/data1/index.html
+  810  vi /etc/httpd/conf.d/one.conf
+  811  systemctl restart httpd
+  812  clear
+  813  rm -rf /var/www/data1/
+  814  mkdir /data1
+  815  cat /data1/index.html
+  816  cat > /data1/index.html
+  817  ls -Zd /var/www/html/
+  818  semanage fcontext -a -t httpd_sys_content_t /data1"(/.*)?"
+  819  restorecon -Rv /data1/
+  820  ls -Zd /data1/
+  821  ls -Zd /data1/index.html 
+  822  clear
+  823  vi /etc/httpd/conf.d/one.conf
+  824  systemctl restart httpd
+  825  vi /etc/httpd/conf.d/one.conf
+  826  cat > /data1/myfile.html
+  827  systemctl restart httpd
+  828  rm /data1/myfile.html
+  829  mkdir /data1/secure
+  830  touch /data1/secure/santya{1..20}
+  831  vi /etc/httpd/conf.d/one.conf
+  832  systemctl restart httpd
+  833  htpasswd -bc /data1/.mypass santosh santosh
+  834  vi /etc/httpd/conf.d/one.conf
+  835  systemctl restart httpd
+  836  httpd -t
+  837  systemctl restart httpd
+  838  vi /etc/httpd/conf.d/one.conf
+  839  systemctl restart httpd
+  840  clear
+  841  vi /etc/httpd/conf.d/one.conf
+  842  vi /etc/httpd/conf/httpd.conf 
+  843  semanage port -l | grep http
+  844  semanage port -a -t http_port_t -p tcp 28080
+  845  semanage port -l | grep http
+  846  systemctl restart httpd
+  847  telstat tunlp 1241
+  848  netstat tunlp 1241
+  849  netstat tunlp | grep 1241
+  850  clear
+  851  netstat -tunlp | grep 1241
+  852  clear
+  853  firewall-cmd --permanent --add-rich-rule "rule family="ipv4" source address="0.0.0.0/0" forward-port to-port="28080" protocol="tcp"port="1241""
+  854  firewall-cmd --permanent --add-rich-rule "rule family="ipv4" source address="0.0.0.0/0" forward-port to-port="28080" protocol="tcp" port="1241""
+  855  firewall-cmd --reload 
+  856  firewall-cmd --list-all
+  857  firewall-cmd --permanent --remove-rich-rule "rule family="ipv4" source address="0.0.0.0/0" forward-port to-port="28080" protocol="tcp" port="1241""
+  858  firewall-cmd --reload 
+  859  firewall-cmd --list-all
+  860  semanage port --delete -t http_port_t -p tcp 28080
+  861  semanage port -l | grep http
+  862  vi /etc/httpd/conf/httpd.conf 
+  863  systemctl restart httpd 
+  864  firewall-cmd --list-all
+  865  clear
+  866  vi /etc/httpd/conf/httpd.conf 
+  867  systemctl restart httpd 
+  868  clear
+  869  #openssl genrsa -out key.pem 2048
+  870  #openssl genrsa -out server.key 2048
+  871  openssl genrsa -out server.key 2048
+  872  #openssl req -new -key server.key -out example-ca.csr
+  873  openssl req -new -key server.key -out example-ca.csr
+  874  openssl x509 -req -in example-ca.csr -signkey server.key -out server.crt
+  875  clear
+  876  cp server.crt /etc/pki/tls/certs/
+  877  cp server.key /etc/pki/tls/private/
+  878  rm /etc/pki/tls/certs/server.crt 
+  879  rm /etc/pki/tls/private/server.key 
+  880  clear
+  881  nmcli connection add type team con-name india ifname india config'{"runner":{"name": "activebackup"}}'
+  882  nmcli connection add type team con-name india ifname india config '{"runner":{"name": "activebackup"}}'
+  883  nmcli connection add type team-slave con-name virat ifname ens37 master india 
+  884  nmcli connection add type team-slave con-name dhoni ifname ens38 master india
+  885  nmcli connection show 
+  886  systemctl restart networko
+  887  nmcli connection show 
+  888  clear
+  889  teamdctl india state
+  890  teamdctl state india
+  891  clear
+  892  teamdctl india state
+  893  ip a
+  894  nmcli connection show 
+  895  systemctl restart network
+  896  nmcli connection show 
+  897  teamdctl india state
+  898  nmcli connection modify india ipv4.addresses "192.168.43.99"
+  899  nmcli connection modify india ipv4.method manual 
+  900  nmcli connection down india ; nmcli connection up india 
+  901  nmcli connection up virat 
+  902  nmcli connection up dhoni 
+  903  teamdctl india state
+  904  ip a
+  905  ping 192.168.43.99
+  906  ping -c 4 192.168.43.99
+  907  clear
+  908  nmcli connection delete virat 
+  909  nmcli connection delete dhoni 
+  910  nmcli connection delete india 
+  911  systemctl restart network
+  912  ip a
+  913  nmcli connection show 
+  914  clear
+  915  ls /
+  916  mkdir /mydata
+  917  touch /mydata/santyaa{1.10}
+  918  vi /etc/exports
+  919  systemctl restart nfs-server
+  920  systemctl enable nfs-server
+  921  firewall-cmd --permanent --add-service=nfs
+  922  firewall-cmd --reload 
+  923  chmod 777 /mydata/
+  924  firewall-cmd --permanent --remove-service=nfs
+  925  firewall-cmd --reload 
+  926  vi /etc/exports
+  927  clear
+  928  cat /etc/passwd
+  929  clear
+  930  useradd om
+  931  smbpasswd -a om
+  932  semanage fcontext -a -t samba_share_t /mydata"(/.*)?"
+  933  restorecon -Rv /mydata/santya
+  934  restorecon -Rv /mydata/
+  935  ls -Zd /mydata/santya
+  936  ls -Zd /mydata/santya21 
+  937  clear
+  938  vi /etc/samba/smb.conf
+  939  systemctl restart smb nmb 
+  940  systemctl enable smb nmb 
+  941  firewall-cmd --permanent --add-service=samba
+  942  firewall-cmd --reload 
+  943  useradd omkar
+  944  smbpasswd -a omkar
+  945  vi /etc/samba/smb.conf
+  946  setsebool -a | grep http
+  947  getsebool -a | grep http
+  948  clear
+  949  getsebool -a | grep httpd
+  950  getsebool -a | grep samba
+  951  clear
+  952  getsebool -a | grep samba
+  953  setsebool -P samba_export_all_ro ON
+  954  setsebool -P samba_export_all_rw ON
+  955  getsebool -a | grep samba
+  956  clear
+  957  setfacl -m u:om:rwx /mydata/
+  958  setfacl -m u:omkar:r-x /mydata/
+  959  systemctl restart smb nmb
+  960  systemctl enable smb nmb
+  961  setsebool -P samba_export_all_rw off
+  962  setsebool -P samba_export_all_ro off
+  963  getsebool -a | grep samba
+  964  vi /etc/samba/smb.conf
+  965  userdel om\
+  966  userdel om
+  967  userdel omkar
+  968  clear
+  969  rm -rf /mydata/
+  970  firewall-cmd --permanent --add-service=samba
+  971  firewall-cmd --permanent --remove--service=samba
+  972  firewall-cmd --permanent --remove-service=samba
+  973  firewall-cmd --reload 
+  974  clear
+  975  systemctl restart smb nmb
+  976  cleart
+  977  clear
+  978  fdisk -l
+  979  pvcreate /dev/sdb
+  980  vgcreate myvg /dev/sdb
+  981  lvcreate -l 50%FREE -n mylv myvg
+  982  lvs
+  983  vgs
+  984  clear
+  985  yum install targetcli
+  986  yum install target
+  987  cd
+  988  ip a
+  989  yum remove httpd* -y
+  990  yum remove targercli -y
+  991  yum remove targetcli -y
+  992  yum remove samba* -y
+  993  yum remove samba -y
+  994  yum remove samba-client -y
+  995  cat /etc/password
+  996  cat /etc/passwd
+  997  yum remove nfs-utils*-y
+  998  yum remove nfs-utils* -y
+  999  yum remove mariadb* -y
+ 1000  rm -rf /etc/mysql 
+ 1001  mount desktop6.example.com:/tmp/mynfs /nfsdata
+ 1002  yum install nfs -y
+ 1003  yum install nfs* -y
+ 1004  yum install nfs -y
+ 1005  yum install nfs-utils* -y
+ 1006  touch /concert/rr.txt
+ 1007  mkdir /dockyard
+ 1008  touch /dockyard/ttt.txt
+ 1009  ls /dockyard/
+ 1010  yum install httpd* -y
+ 1011  echo "Hello redhat" > /var/www/html/index.html
+ 1012  cp /usr/share/doc/httpd-2.4.6/httpd-vhosts.conf /etc/httpd/conf.d/one.conf
+ 1013  vim /etc/httpd/conf.d/one.conf
+ 1014  httpd -t
+ 1015  firewall-cmd --permanent --add-port=80/tcp
+ 1016  firewall-cmd --permanent --add-service=htt[
+ 1017  firewall-cmd --permanent --add-service=http
+ 1018  firewall-cmd --reload 
+ 1019  systemctl restart httpd
+ 1020  curl http://
+ 1021  curl http://server6.example.com
+ 1022  mkdir /var/www/html/notes
+ 1023  touch /var/www/html/notes/redhat{1..10}.txt
+ 1024  vim /etc/httpd/conf.d/one.conf
+ 1025  httpd -t
+ 1026  systemctl restart httpd
+ 1027  curl http://server6.example.com/notes
+ 1028  vim /etc/httpd/conf.d/one.conf
+ 1029  systemctl restart httpd
+ 1030  cat /etc/hosts
+ 1031  vim /etc/hosts
+ 1032  systemctl restart httpd
+ 1033  cp /etc/httpd/conf.d/one.conf /etc/httpd/conf.d/two.conf
+ 1034  vim /etc/httpd/conf.d/two.conf
+ 1035  httpd -t
+ 1036  systemctl restart httpd
+ 1037  vim /etc/httpd/conf.d/two.conf
+ 1038  systemctl restart httpd
+ 1039  vim /etc/httpd/conf.d/two.conf
+ 1040  systemctl restart httpd
+ 1041  curl server6.example.com
+ 1042  semanage port -l | grep http
+ 1043  semanage port -a -t http_port_t -p tcp 8998
+ 1044  vim /etc/httpd/conf/httpd.conf
+ 1045  systemctl restart httpd
+ 1046  curl webapp6.example.com:8998
+ 1047  yum install iscsi* -y
+ 1048  iscsiadm --mode discoverydb --type sendtargets --portal 192.168.1.10 --discover
+ 1049  iscsiadm --mode discoverydb --type sendtargets --portal 192.168.43.4 --discover
+ 1050  iscsiadm --mode node --targetname iqn.2001-05.com.doe:test --portal 192.168.1.1:3260 --login
+ 1051  iscsiadm --mode node --targetname iqn.2017-18.com.example.network6.system2 --portal 192.168.43.4:3260 --login
+ 1052  lsblk
+ 1053  iscsiadm --mode node --targetname iqn.2017-18.com.example.network6.system2 --portal 192.168.43.4:3260 --logout
+ 1054  lsblk
+ 1055  iscsiadm --mode node --targetname iqn.2017-18.com.example.network6.system2 --portal 192.168.43.4:3260 --login
+ 1056  lsblk
+ 1057  mkdir /shareddisk
+ 1058  chmod 0644 /shareddisk/
+ 1059  fdisk /dev/sdc
+ 1060  partprobe /dev/sdc
+ 1061  mkfs.ext4 /dev/sdc
+ 1062  mkfs.ext4 /dev/sdc1
+ 1063  blkid /dev/sdc1
+ 1064  vim /etc/fstab 
+ 1065  mount -av
+ 1066  df -h
+ 1067  vim /root/condition
+ 1068  chmod +x /root/condition
+ 1069  ./root/condition
+ 1070  ./root/condition Linux
+ 1071  cp /root/condition /root/condition.sh
+ 1072  chmod +x /root/condition.sh 
+ 1073  ./root/condition.sh Linx
+ 1074  ./root/condition.sh Linux
+ 1075  ls /
+ 1076  ls /root
+ 1077  sh /root/condition.sh 
+ 1078* chmod +x /root/condition.s
+ 1079* 
+ 1080  sh /root/condition
+ 1081  sh /root/condition Linux
+ 1082  sh /root/condition Fedora
+ 1083  vim /root/usersauto
+ 1084  chmod +x /root/usersauto
+ 1085  ls
+ 1086  sh /root/usersauto username.txt
+ 1087  cat /etc/passwd
+ 1088  yum install mariadb* -y
+ 1089  systemctl restart mariadb 
+ 1090  systemctl enable mariadb 
+ 1091  mysql_secure_installation 
+ 1092  mysql -uroot -psantosh
+ 1093  history

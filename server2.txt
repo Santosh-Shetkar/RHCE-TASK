@@ -1,0 +1,57 @@
+002  vim /etc/sysconfig/selinux 
+ 1003  firewall-cmd --permanent --add-rich-rule="rule family" source address="192.168.43.175" service name="ssh" drop"
+ 1004  firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="192.168.43.175" service name="ssh" drop"
+ 1005  firewall-cmd --reload 
+ 1006  ip a
+ 1007  mount 192.168.43.4:/tmp/mynfs /nfsdata/
+ 1008  df -h
+ 1009  yum install samba samba-client -y
+ 1010  mkdir /concert
+ 1011  semanage fcontext -a -t samba_share_t "/concert(/.*)?"
+ 1012  restorecon -Rv /concert/
+ 1013  useradd samual
+ 1014  smbpasswd -a samual
+ 1015  vim /etc/samba/smb.conf
+ 1016  systemctl restart smb nmb
+ 1017  systemctl enable smb nmb
+ 1018  firewall-cmd --permanent --add-service=samba]
+ 1019  firewall-cmd --permanent --add-service=samba
+ 1020  firewall-cmd --reload 
+ 1021  useradd mitchel
+ 1022  useradd catherine
+ 1023  smbpasswd -a mitchel
+ 1024  smbpasswd -a catherine
+ 1025  setfacl -m u:mitchel:rwx /dockyard/
+ 1026  setfacl -m u:catherine:r-x /dockyard/
+ 1027  vim /etc/samba/smb.conf
+ 1028  getsebool -a | grep samba
+ 1029  setsebool -P samba_export_all_ro on
+ 1030  setsebool -P samba_export_all_rw on
+ 1031  testparm
+ 1032  vim /etc/samba/smb.conf
+ 1033  testparm
+ 1034  systemctl restart smb nmb
+ 1035  testparm
+ 1036  mkdir /var/www/practice
+ 1037  echo "This is practice " > /var/www/practice/index.html
+ 1038  vim /etc/hosts
+ 1039  yum install mod_wsgi* -y
+ 1040  cp /etc/httpd/conf.d/one.conf /etc/httpd/conf.d/three.conf
+ 1041  vim /etc/httpd/conf.d/three.conf
+ 1042  mkdir /var/www/dynamic
+ 1043  vim /var/www/dynamic/webapp.wsgi
+ 1044  vim /etc/httpd/conf.d/three.conf
+ 1045  httpd -t
+ 1046  systemctl restart httpd
+ 1047  vim /etc/httpd/conf.d/three.conf
+ 1048  vim /etc/iscsi/initiatorname.iscsi 
+ 1049  systemctl restart iscsid
+ 1050  systemctl restart iscsi
+ 1051  systemctl enable iscsi
+ 1052  systemctl enable iscsid
+ 1053  man iscsiadm
+ 1054  vim username.txt
+ 1055  ls
+ 1056  firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="192.168.43.4/24" forward-port to-port="80" protocol="tcp" port="5343""
+ 1057  firewall-cmd --reload 
+ 1058  history

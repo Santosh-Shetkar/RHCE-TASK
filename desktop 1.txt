@@ -1,0 +1,1722 @@
+Password: 
+[root@santosh21 santosh]# cd
+[root@santosh21 ~]# 
+[root@santosh21 ~]# cat /usr/share/doc/teamd-1.27/example_configs/activebackup_arp_ping_1.conf 
+{
+	"device":	"team0",
+	"runner":	{"name": "activebackup"},
+	"link_watch":	{
+		"name": "arp_ping",
+		"interval": 100,
+		"missed_max": 30,
+		"source_host": "192.168.23.2",
+		"target_host": "192.168.23.1"
+	},
+	"ports":	{
+		"eth1": {
+			"prio": -10,
+			"sticky": true
+		},
+		"eth2": {
+			"prio": 100
+		}
+	}
+}
+[root@santosh21 ~]# 
+
+
+
+
+
+
+
+
+
+
+[root@santosh21 ~]# ip a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: ens33: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 00:0c:29:bb:4e:0d brd ff:ff:ff:ff:ff:ff
+    inet 192.168.43.4/24 brd 192.168.43.255 scope global noprefixroute dynamic ens33
+       valid_lft 2647sec preferred_lft 2647sec
+    inet6 2406:204:9629:a54f:124e:592c:9135:a572/64 scope global noprefixroute 
+       valid_lft forever preferred_lft forever
+    inet6 fe80::a7de:4843:4d17:4d5a/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+3: virbr0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default qlen 1000
+    link/ether 52:54:00:86:ed:45 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.122.1/24 brd 192.168.122.255 scope global virbr0
+       valid_lft forever preferred_lft forever
+4: virbr0-nic: <BROADCAST,MULTICAST> mtu 1500 qdisc fq_codel master virbr0 state DOWN group default qlen 1000
+    link/ether 52:54:00:86:ed:45 brd ff:ff:ff:ff:ff:ff
+5: ens37: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 00:0c:29:bb:4e:17 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.17.134/24 brd 192.168.17.255 scope global noprefixroute dynamic ens37
+       valid_lft 1618sec preferred_lft 1618sec
+    inet6 fe80::9186:68b8:bf7c:dd41/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+6: ens38: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 00:0c:29:bb:4e:21 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.17.135/24 brd 192.168.17.255 scope global noprefixroute dynamic ens38
+       valid_lft 1618sec preferred_lft 1618sec
+    inet6 fe80::8a3f:e241:8cf3:f9b3/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+7: team0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default qlen 1000
+    link/ether ae:65:dc:3d:65:49 brd ff:ff:ff:ff:ff:ff
+[root@santosh21 ~]# 
+[root@santosh21 ~]# yum install nfs-utils* -y
+Loaded plugins: fastestmirror, langpacks
+Existing lock /var/run/yum.pid: another copy is running as pid 32405.
+Another app is currently holding the yum lock; waiting for it to exit...
+  The other application is: yum
+    Memory :  44 M RSS (468 MB VSZ)
+    Started: Sat Nov 21 16:46:25 2020 - 01:21 ago
+    State  : Running, pid: 32405
+Another app is currently holding the yum lock; waiting for it to exit...
+  The other application is: yum
+    Memory :  44 M RSS (468 MB VSZ)
+    Started: Sat Nov 21 16:46:25 2020 - 01:23 ago
+    State  : Running, pid: 32405
+Another app is currently holding the yum lock; waiting for it to exit...
+  The other application is: yum
+    Memory :  45 M RSS (477 MB VSZ)
+    Started: Sat Nov 21 16:46:25 2020 - 01:25 ago
+    State  : Running, pid: 32405
+Another app is currently holding the yum lock; waiting for it to exit...
+  The other application is: yum
+    Memory :  46 M RSS (477 MB VSZ)
+    Started: Sat Nov 21 16:46:25 2020 - 01:27 ago
+    State  : Running, pid: 32405
+Another app is currently holding the yum lock; waiting for it to exit...
+  The other application is: yum
+    Memory :  47 M RSS (477 MB VSZ)
+    Started: Sat Nov 21 16:46:25 2020 - 01:29 ago
+    State  : Running, pid: 32405
+Another app is currently holding the yum lock; waiting for it to exit...
+  The other application is: yum
+    Memory :  48 M RSS (477 MB VSZ)
+    Started: Sat Nov 21 16:46:25 2020 - 01:31 ago
+    State  : Running, pid: 32405
+Another app is currently holding the yum lock; waiting for it to exit...
+  The other application is: yum
+    Memory :  50 M RSS (477 MB VSZ)
+    Started: Sat Nov 21 16:46:25 2020 - 01:33 ago
+    State  : Running, pid: 32405
+Another app is currently holding the yum lock; waiting for it to exit...
+  The other application is: yum
+    Memory :  44 M RSS (468 MB VSZ)
+    Started: Sat Nov 21 16:46:25 2020 - 01:35 ago
+    State  : Running, pid: 32405
+Another app is currently holding the yum lock; waiting for it to exit...
+  The other application is: yum
+    Memory :  44 M RSS (468 MB VSZ)
+    Started: Sat Nov 21 16:46:25 2020 - 01:37 ago
+    State  : Running, pid: 32405
+Another app is currently holding the yum lock; waiting for it to exit...
+  The other application is: yum
+    Memory :  44 M RSS (468 MB VSZ)
+    Started: Sat Nov 21 16:46:25 2020 - 01:39 ago
+    State  : Running, pid: 32405
+Loading mirror speeds from cached hostfile
+ * base: centos-hcm.viettelidc.com.vn
+ * extras: centos-hcm.viettelidc.com.vn
+ * updates: centos-hcm.viettelidc.com.vn
+Resolving Dependencies
+--> Running transaction check
+---> Package nfs-utils.x86_64 1:1.3.0-0.61.el7 will be updated
+---> Package nfs-utils.x86_64 1:1.3.0-0.68.el7 will be an update
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+=====================================================================================================================================================
+ Package                            Arch                            Version                                      Repository                     Size
+=====================================================================================================================================================
+Updating:
+ nfs-utils                          x86_64                          1:1.3.0-0.68.el7                             base                          412 k
+
+Transaction Summary
+=====================================================================================================================================================
+Upgrade  1 Package
+
+Total download size: 412 k
+Downloading packages:
+No Presto metadata available for base
+nfs-utils-1.3.0-0.68.el7.x86_64.rpm                                                                                           | 412 kB  00:00:09     
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Updating   : 1:nfs-utils-1.3.0-0.68.el7.x86_64                                                                                                 1/2 
+  Cleanup    : 1:nfs-utils-1.3.0-0.61.el7.x86_64                                                                                                 2/2 
+  Verifying  : 1:nfs-utils-1.3.0-0.68.el7.x86_64                                                                                                 1/2 
+  Verifying  : 1:nfs-utils-1.3.0-0.61.el7.x86_64                                                                                                 2/2 
+
+Updated:
+  nfs-utils.x86_64 1:1.3.0-0.68.el7                                                                                                                  
+
+Complete!
+[root@santosh21 ~]# 
+[root@santosh21 ~]# vim /etc/exports
+[root@santosh21 ~]# systemctl restart nfs-server
+[root@santosh21 ~]# systemctl enable nfs-server
+Created symlink from /etc/systemd/system/multi-user.target.wants/nfs-server.service to /usr/lib/systemd/system/nfs-server.service.
+[root@santosh21 ~]# firewall-cmd --permanent --add-service=nfs
+success
+[root@santosh21 ~]# firewall-cmd --reload 
+success
+[root@santosh21 ~]# hostname
+desktop6.example.com
+[root@santosh21 ~]# su
+[root@desktop6 ~]# 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[root@desktop6 ~]# exportfs -rv
+exporting server6.example.com:/tmp/mynfs
+[root@desktop6 ~]# yum install samba-client cifs-utils* -y
+Loaded plugins: fastestmirror, langpacks
+Loading mirror speeds from cached hostfile
+ * base: centos-hcm.viettelidc.com.vn
+ * extras: centos-hcm.viettelidc.com.vn
+ * updates: centos-hcm.viettelidc.com.vn
+Resolving Dependencies
+--> Running transaction check
+---> Package cifs-utils.x86_64 0:6.2-10.el7 will be installed
+---> Package cifs-utils-devel.x86_64 0:6.2-10.el7 will be installed
+---> Package samba-client.x86_64 0:4.10.16-7.el7_9 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+=====================================================================================================================================================
+ Package                                 Arch                          Version                                  Repository                      Size
+=====================================================================================================================================================
+Installing:
+ cifs-utils                              x86_64                        6.2-10.el7                               base                            85 k
+ cifs-utils-devel                        x86_64                        6.2-10.el7                               base                            11 k
+ samba-client                            x86_64                        4.10.16-7.el7_9                          updates                        645 k
+
+Transaction Summary
+=====================================================================================================================================================
+Install  3 Packages
+
+Total download size: 741 k
+Installed size: 2.2 M
+Downloading packages:
+(1/3): cifs-utils-devel-6.2-10.el7.x86_64.rpm                                                                                 |  11 kB  00:00:03     
+(2/3): cifs-utils-6.2-10.el7.x86_64.rpm                                                                                       |  85 kB  00:00:11     
+(3/3): samba-client-4.10.16-7.el7_9.x86_64.rpm                                                                                | 645 kB  00:00:30     
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                                 24 kB/s | 741 kB  00:00:30     
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : cifs-utils-6.2-10.el7.x86_64                                                                                                      1/3 
+  Installing : cifs-utils-devel-6.2-10.el7.x86_64                                                                                                2/3 
+  Installing : samba-client-4.10.16-7.el7_9.x86_64                                                                                               3/3 
+  Verifying  : samba-client-4.10.16-7.el7_9.x86_64                                                                                               1/3 
+  Verifying  : cifs-utils-devel-6.2-10.el7.x86_64                                                                                                2/3 
+  Verifying  : cifs-utils-6.2-10.el7.x86_64                                                                                                      3/3 
+
+Installed:
+  cifs-utils.x86_64 0:6.2-10.el7               cifs-utils-devel.x86_64 0:6.2-10.el7               samba-client.x86_64 0:4.10.16-7.el7_9              
+
+Complete!
+[root@desktop6 ~]# 
+[root@desktop6 ~]# mkdir /samba1
+[root@desktop6 ~]# mount -o username=samual //server6.example.com/ARTIST /samba1/
+Password for samual@//server6.example.com/ARTIST:  ********
+[root@desktop6 ~]# df -h
+Filesystem                    Size  Used Avail Use% Mounted on
+/dev/sda3                      18G   17G  1.2G  94% /
+devtmpfs                      895M     0  895M   0% /dev
+tmpfs                         910M     0  910M   0% /dev/shm
+tmpfs                         910M   11M  900M   2% /run
+tmpfs                         910M     0  910M   0% /sys/fs/cgroup
+/dev/sda1                     297M  159M  139M  54% /boot
+tmpfs                         182M  4.0K  182M   1% /run/user/42
+tmpfs                         182M   28K  182M   1% /run/user/1000
+tmpfs                         182M     0  182M   0% /run/user/0
+//server6.example.com/ARTIST   18G  8.8G  9.0G  50% /samba1
+[root@desktop6 ~]# 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[root@desktop6 ~]# su - samual
+su: user samual does not exist
+[root@desktop6 ~]# useradd samual
+[root@desktop6 ~]# su - samual
+Attempting to create directory /home/samual/perl5
+[samual@desktop6 ~]$ cifscreds add server6.example.com 
+Password: 
+[samual@desktop6 ~]$ cd /samba1
+[samual@desktop6 samba1]$ ls
+rr.txt
+[samual@desktop6 samba1]$ logout
+[root@desktop6 ~]# umount /samba1
+[root@desktop6 ~]# 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[root@desktop6 ~]# mount -o username=samual //server6.example.com/ARTIST /samba1/
+Password for samual@//server6.example.com/ARTIST:  ********
+[root@desktop6 ~]# df -h
+Filesystem                    Size  Used Avail Use% Mounted on
+/dev/sda3                      18G   17G  1.2G  94% /
+devtmpfs                      895M     0  895M   0% /dev
+tmpfs                         910M     0  910M   0% /dev/shm
+tmpfs                         910M   11M  900M   2% /run
+tmpfs                         910M     0  910M   0% /sys/fs/cgroup
+/dev/sda1                     297M  159M  139M  54% /boot
+tmpfs                         182M  4.0K  182M   1% /run/user/42
+tmpfs                         182M   28K  182M   1% /run/user/1000
+tmpfs                         182M     0  182M   0% /run/user/0
+//server6.example.com/ARTIST   18G  8.8G  9.0G  50% /samba1
+[root@desktop6 ~]# vim /etc/fstab 
+[root@desktop6 ~]# 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[root@desktop6 ~]# mount -av
+/                        : ignored
+/boot                    : already mounted
+swap                     : ignored
+mount.cifs kernel mount options: ip=192.168.43.90,unc=\\server6.example.com\OPENGROUP,nultiuser,sec=ntlmssp,user=catherine,pass=********
+mount error(22): Invalid argument
+Refer to the mount.cifs(8) manual page (e.g. man mount.cifs)
+[root@desktop6 ~]# df -h
+Filesystem                    Size  Used Avail Use% Mounted on
+/dev/sda3                      18G   17G  1.2G  94% /
+devtmpfs                      895M     0  895M   0% /dev
+tmpfs                         910M     0  910M   0% /dev/shm
+tmpfs                         910M   11M  900M   2% /run
+tmpfs                         910M     0  910M   0% /sys/fs/cgroup
+/dev/sda1                     297M  159M  139M  54% /boot
+tmpfs                         182M  4.0K  182M   1% /run/user/42
+tmpfs                         182M   28K  182M   1% /run/user/1000
+tmpfs                         182M     0  182M   0% /run/user/0
+//server6.example.com/ARTIST   18G  8.8G  9.0G  50% /samba1
+[root@desktop6 ~]# vim /etc/fstab 
+[root@desktop6 ~]# mount -av
+/                        : ignored
+/boot                    : already mounted
+swap                     : ignored
+mount.cifs kernel mount options: ip=192.168.43.90,unc=\\server6.example.com\OPENGROUP,multiuser,sec=ntlmssp,user=catherine,pass=********
+/mnt/akon                : successfully mounted
+[root@desktop6 ~]# df -h
+Filesystem                       Size  Used Avail Use% Mounted on
+/dev/sda3                         18G   17G  1.2G  94% /
+devtmpfs                         895M     0  895M   0% /dev
+tmpfs                            910M     0  910M   0% /dev/shm
+tmpfs                            910M   11M  900M   2% /run
+tmpfs                            910M     0  910M   0% /sys/fs/cgroup
+/dev/sda1                        297M  159M  139M  54% /boot
+tmpfs                            182M  4.0K  182M   1% /run/user/42
+tmpfs                            182M   28K  182M   1% /run/user/1000
+tmpfs                            182M     0  182M   0% /run/user/0
+//server6.example.com/ARTIST      18G  8.8G  9.0G  50% /samba1
+//server6.example.com/OPENGROUP   18G  8.8G  9.0G  50% /mnt/akon
+[root@desktop6 ~]# 
+[root@desktop6 ~]# useradd catherine
+[root@desktop6 ~]# su - catherine
+Attempting to create directory /home/catherine/perl5
+[catherine@desktop6 ~]$ cifscreds add server6.example.com
+Password: 
+[catherine@desktop6 ~]$ ls /mnt/akon/
+ttt.txt
+[catherine@desktop6 ~]$ touch /mnt/akon/rrrrrrr.txt
+touch: cannot touch ‘/mnt/akon/rrrrrrr.txt’: Permission denied
+[catherine@desktop6 ~]$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[catherine@desktop6 ~]$ logout
+[root@desktop6 ~]# su - catherine
+Last login: Sat Nov 21 17:22:10 IST 2020 on pts/1
+[catherine@desktop6 ~]$ logout
+[root@desktop6 ~]# su - mitchel
+su: user mitchel does not exist
+[root@desktop6 ~]# useradd mitchel
+[root@desktop6 ~]# su - mitchel
+Attempting to create directory /home/mitchel/perl5
+[mitchel@desktop6 ~]$ cifscreds add server6.example.com
+Password: 
+[mitchel@desktop6 ~]$ ls /mnt/akon/
+ttt.txt
+[mitchel@desktop6 ~]$ touch /mnt/akon/ttttttttttttttttttttt.txt
+[mitchel@desktop6 ~]$ ls /mnt/akon/
+ttttttttttttttttttttt.txt  ttt.txt
+[mitchel@desktop6 ~]$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[mitchel@desktop6 ~]$ yum install httpd* -y
+Loaded plugins: fastestmirror, langpacks
+You need to be root to perform this command.
+[mitchel@desktop6 ~]$ logout
+[root@desktop6 ~]# 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[root@desktop6 ~]# yum install httpd* -y
+Loaded plugins: fastestmirror, langpacks
+Loading mirror speeds from cached hostfile
+ * base: centos-hcm.viettelidc.com.vn
+ * extras: centos-hcm.viettelidc.com.vn
+ * updates: centos-hcm.viettelidc.com.vn
+Resolving Dependencies
+--> Running transaction check
+---> Package httpd.x86_64 0:2.4.6-88.el7.centos will be updated
+--> Processing Dependency: httpd = 2.4.6-88.el7.centos for package: 1:mod_ssl-2.4.6-88.el7.centos.x86_64
+--> Processing Dependency: httpd = 2.4.6-88.el7.centos for package: mod_session-2.4.6-88.el7.centos.x86_64
+---> Package httpd.x86_64 0:2.4.6-95.el7.centos will be an update
+---> Package httpd-devel.x86_64 0:2.4.6-88.el7.centos will be updated
+---> Package httpd-devel.x86_64 0:2.4.6-95.el7.centos will be an update
+---> Package httpd-manual.noarch 0:2.4.6-88.el7.centos will be updated
+---> Package httpd-manual.noarch 0:2.4.6-95.el7.centos will be an update
+---> Package httpd-tools.x86_64 0:2.4.6-88.el7.centos will be updated
+---> Package httpd-tools.x86_64 0:2.4.6-95.el7.centos will be an update
+--> Running transaction check
+---> Package mod_session.x86_64 0:2.4.6-88.el7.centos will be updated
+---> Package mod_session.x86_64 0:2.4.6-95.el7.centos will be an update
+--> Processing Dependency: apr-util-openssl for package: mod_session-2.4.6-95.el7.centos.x86_64
+---> Package mod_ssl.x86_64 1:2.4.6-88.el7.centos will be updated
+---> Package mod_ssl.x86_64 1:2.4.6-95.el7.centos will be an update
+--> Running transaction check
+---> Package apr-util-openssl.x86_64 0:1.5.2-6.el7 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+=====================================================================================================================================================
+ Package                                Arch                         Version                                        Repository                  Size
+=====================================================================================================================================================
+Updating:
+ httpd                                  x86_64                       2.4.6-95.el7.centos                            base                       2.7 M
+ httpd-devel                            x86_64                       2.4.6-95.el7.centos                            base                       199 k
+ httpd-manual                           noarch                       2.4.6-95.el7.centos                            base                       1.3 M
+ httpd-tools                            x86_64                       2.4.6-95.el7.centos                            base                        93 k
+Installing for dependencies:
+ apr-util-openssl                       x86_64                       1.5.2-6.el7                                    base                        20 k
+Updating for dependencies:
+ mod_session                            x86_64                       2.4.6-95.el7.centos                            base                        63 k
+ mod_ssl                                x86_64                       1:2.4.6-95.el7.centos                          base                       114 k
+
+Transaction Summary
+=====================================================================================================================================================
+Install             ( 1 Dependent package)
+Upgrade  4 Packages (+2 Dependent packages)
+
+Total download size: 4.5 M
+Downloading packages:
+No Presto metadata available for base
+(1/7): apr-util-openssl-1.5.2-6.el7.x86_64.rpm                                                                                |  20 kB  00:00:05     
+(2/7): httpd-devel-2.4.6-95.el7.centos.x86_64.rpm                                                                             | 199 kB  00:00:06     
+(3/7): mod_session-2.4.6-95.el7.centos.x86_64.rpm                                                                             |  63 kB  00:00:01     
+(4/7): httpd-tools-2.4.6-95.el7.centos.x86_64.rpm                                                                             |  93 kB  00:00:07     
+(5/7): mod_ssl-2.4.6-95.el7.centos.x86_64.rpm                                                                                 | 114 kB  00:00:02     
+(6/7): httpd-manual-2.4.6-95.el7.centos.noarch.rpm                                                                            | 1.3 MB  00:00:12     
+(7/7): httpd-2.4.6-95.el7.centos.x86_64.rpm                                                                                   | 2.7 MB  00:00:16     
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                                271 kB/s | 4.5 MB  00:00:17     
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Updating   : httpd-tools-2.4.6-95.el7.centos.x86_64                                                                                           1/13 
+  Updating   : httpd-2.4.6-95.el7.centos.x86_64                                                                                                 2/13 
+  Installing : apr-util-openssl-1.5.2-6.el7.x86_64                                                                                              3/13 
+  Updating   : mod_session-2.4.6-95.el7.centos.x86_64                                                                                           4/13 
+  Updating   : httpd-manual-2.4.6-95.el7.centos.noarch                                                                                          5/13 
+  Updating   : httpd-devel-2.4.6-95.el7.centos.x86_64                                                                                           6/13 
+  Updating   : 1:mod_ssl-2.4.6-95.el7.centos.x86_64                                                                                             7/13 
+  Cleanup    : mod_session-2.4.6-88.el7.centos.x86_64                                                                                           8/13 
+  Cleanup    : 1:mod_ssl-2.4.6-88.el7.centos.x86_64                                                                                             9/13 
+  Cleanup    : httpd-devel-2.4.6-88.el7.centos.x86_64                                                                                          10/13 
+  Cleanup    : httpd-manual-2.4.6-88.el7.centos.noarch                                                                                         11/13 
+  Cleanup    : httpd-2.4.6-88.el7.centos.x86_64                                                                                                12/13 
+  Cleanup    : httpd-tools-2.4.6-88.el7.centos.x86_64                                                                                          13/13 
+  Verifying  : httpd-manual-2.4.6-95.el7.centos.noarch                                                                                          1/13 
+  Verifying  : httpd-devel-2.4.6-95.el7.centos.x86_64                                                                                           2/13 
+  Verifying  : apr-util-openssl-1.5.2-6.el7.x86_64                                                                                              3/13 
+  Verifying  : httpd-tools-2.4.6-95.el7.centos.x86_64                                                                                           4/13 
+  Verifying  : httpd-2.4.6-95.el7.centos.x86_64                                                                                                 5/13 
+  Verifying  : 1:mod_ssl-2.4.6-95.el7.centos.x86_64                                                                                             6/13 
+  Verifying  : mod_session-2.4.6-95.el7.centos.x86_64                                                                                           7/13 
+  Verifying  : httpd-devel-2.4.6-88.el7.centos.x86_64                                                                                           8/13 
+  Verifying  : httpd-manual-2.4.6-88.el7.centos.noarch                                                                                          9/13 
+  Verifying  : 1:mod_ssl-2.4.6-88.el7.centos.x86_64                                                                                            10/13 
+  Verifying  : httpd-tools-2.4.6-88.el7.centos.x86_64                                                                                          11/13 
+  Verifying  : httpd-2.4.6-88.el7.centos.x86_64                                                                                                12/13 
+  Verifying  : mod_session-2.4.6-88.el7.centos.x86_64                                                                                          13/13 
+
+Dependency Installed:
+  apr-util-openssl.x86_64 0:1.5.2-6.el7                                                                                                              
+
+Updated:
+  httpd.x86_64 0:2.4.6-95.el7.centos               httpd-devel.x86_64 0:2.4.6-95.el7.centos         httpd-manual.noarch 0:2.4.6-95.el7.centos        
+  httpd-tools.x86_64 0:2.4.6-95.el7.centos        
+
+Dependency Updated:
+  mod_session.x86_64 0:2.4.6-95.el7.centos                                    mod_ssl.x86_64 1:2.4.6-95.el7.centos                                   
+
+Complete!
+[root@desktop6 ~]# 
+[root@desktop6 ~]# vim /etc/hosts
+[root@desktop6 ~]# yum install mod_ssl* -y
+Loaded plugins: fastestmirror, langpacks
+Loading mirror speeds from cached hostfile
+ * base: centos-hcm.viettelidc.com.vn
+ * extras: centos-hcm.viettelidc.com.vn
+ * updates: centos-hcm.viettelidc.com.vn
+Package 1:mod_ssl-2.4.6-95.el7.centos.x86_64 already installed and latest version
+Nothing to do
+[root@desktop6 ~]# 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[root@desktop6 ~]# man req
+[root@desktop6 ~]# man x509
+[root@desktop6 ~]# 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[root@desktop6 ~]# cd /etc/httpd/conf.d/
+[root@desktop6 conf.d]# ls
+autoindex.conf  fcgid.conf  lookup_identity.conf  manual.conf  nss.conf  php.conf  README  ssl.conf  userdir.conf  welcome.conf
+[root@desktop6 conf.d]# cp ssl.conf myssl.conf
+[root@desktop6 conf.d]# 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[root@desktop6 conf.d]# vim myssl.conf 
+[root@desktop6 conf.d]# vim myssl.conf 
+[root@desktop6 conf.d]# 
+
+
+
+
+
+
+
+
+
+
+
+
+[root@desktop6 conf.d]# httpd -t
+Syntax OK
+[root@desktop6 conf.d]# systemctl restart httpd
+[root@desktop6 conf.d]# curl https://server6.example.com
+curl: (7) Failed connect to server6.example.com:443; Connection refused
+[root@desktop6 conf.d]# vim myssl.conf 
+[root@desktop6 conf.d]# systemctl restart httpd
+[root@desktop6 conf.d]# vim myssl.conf 
+[root@desktop6 conf.d]# systemctl restart httpd
+[root@desktop6 conf.d]# vim myssl.conf 
+[root@desktop6 conf.d]# httpd -t
+Syntax OK
+[root@desktop6 conf.d]# echo "Hhhhh" > /var/www/html/index.html
+[root@desktop6 conf.d]# ;3~                                                                                                                        ^C
+[root@desktop6 conf.d]# mv myssl.conf /
+[root@desktop6 conf.d]# systemctl restart httpd
+[root@desktop6 conf.d]# cp /myssl.conf .
+[root@desktop6 conf.d]# vim myssl.conf 
+[root@desktop6 conf.d]# vim myssl.conf 
+[root@desktop6 conf.d]# systemctl restart httpd
+[root@desktop6 conf.d]# vim myssl.conf 
+[root@desktop6 conf.d]# systemctl restart httpd
+[root@desktop6 conf.d]# cd
+[root@desktop6 ~]# curl https://desktop6.example.com
+curl: (60) Peer's certificate issuer has been marked as not trusted by the user.
+More details here: http://curl.haxx.se/docs/sslcerts.html
+
+curl performs SSL certificate verification by default, using a "bundle"
+ of Certificate Authority (CA) public keys (CA certs). If the default
+ bundle file isn't adequate, you can specify an alternate file
+ using the --cacert option.
+If this HTTPS server uses a certificate signed by a CA represented in
+ the bundle, the certificate verification probably failed due to a
+ problem with the certificate (it might be expired, or the name might
+ not match the domain name in the URL).
+If you'd like to turn off curl's verification of the certificate, use
+ the -k (or --insecure) option.
+[root@desktop6 ~]# cd /etc/httpd/conf.d/
+[root@desktop6 conf.d]# vim myssl.conf 
+[root@desktop6 conf.d]# vim myssl.conf 
+[root@desktop6 conf.d]# systemctl restart httpd
+[root@desktop6 conf.d]# vim myssl.conf 
+[root@desktop6 conf.d]# systemctl restart httpd
+[root@desktop6 conf.d]# firewall-cmd --permanent --add-service=https
+success
+[root@desktop6 conf.d]# firewall-cmd --reload 
+success
+[root@desktop6 conf.d]# vim myssl.conf 
+[root@desktop6 conf.d]# echo "This is ssl" > /var/www/html/index.html 
+[root@desktop6 conf.d]# 
+[root@desktop6 conf.d]# cd
+[root@desktop6 ~]# 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[root@desktop6 ~]# yum install targetcli
+Loaded plugins: fastestmirror, langpacks
+Loading mirror speeds from cached hostfile
+ * base: centos-hcm.viettelidc.com.vn
+ * extras: centos-hcm.viettelidc.com.vn
+ * updates: centos-hcm.viettelidc.com.vn
+Resolving Dependencies
+--> Running transaction check
+---> Package targetcli.noarch 0:2.1.fb46-7.el7 will be updated
+---> Package targetcli.noarch 0:2.1.51-2.el7 will be an update
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+=====================================================================================================================================================
+ Package                             Arch                             Version                                   Repository                      Size
+=====================================================================================================================================================
+Updating:
+ targetcli                           noarch                           2.1.51-2.el7                              base                            74 k
+
+Transaction Summary
+=====================================================================================================================================================
+Upgrade  1 Package
+
+Total download size: 74 k
+Is this ok [y/d/N]: y
+Downloading packages:
+No Presto metadata available for base
+targetcli-2.1.51-2.el7.noarch.rpm                                                                                             |  74 kB  00:00:05     
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Updating   : targetcli-2.1.51-2.el7.noarch                                                                                                     1/2 
+  Cleanup    : targetcli-2.1.fb46-7.el7.noarch                                                                                                   2/2 
+  Verifying  : targetcli-2.1.51-2.el7.noarch                                                                                                     1/2 
+  Verifying  : targetcli-2.1.fb46-7.el7.noarch                                                                                                   2/2 
+
+Updated:
+  targetcli.noarch 0:2.1.51-2.el7                                                                                                                    
+
+Complete!
+[root@desktop6 ~]# 
+[root@desktop6 ~]# systemctl restart target
+[root@desktop6 ~]# systemctl enable target
+Created symlink from /etc/systemd/system/multi-user.target.wants/target.service to /usr/lib/systemd/system/target.service.
+[root@desktop6 ~]# 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[root@desktop6 ~]# lsblk
+NAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+sda      8:0    0   20G  0 disk 
+├─sda1   8:1    0  300M  0 part /boot
+├─sda2   8:2    0    2G  0 part [SWAP]
+└─sda3   8:3    0 17.7G  0 part /
+sr0     11:0    1 1024M  0 rom  
+[root@desktop6 ~]# 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[root@desktop6 ~]# history
+    1  c
+    2  cd
+    3  clear
+    4  fdisk -l
+    5  pvcreate /dev/sdb1
+    6  pvcreate /dev/sdb2
+    7  cd
+    8  mysql -ukunver -psantosh -h192.168.43.90
+    9  cd
+   10  vi /etc/hosts
+   11  cd
+   12  man iscsiadm
+   13  cd
+   14  vi /etc/iscsi/initiatorname.iscsi 
+   15  #iscsiadm --mode discoverydb --type sendtargets --portal 192.168.43.43 --discover
+   16  iscsiadm --mode discoverydb --type sendtargets --portal 192.168.43.43 --discover
+   17  iscsiadm --mode node --targetname iqn.2018-19.example.com --portal 192.168.43.43:3260 --login
+   18  vi /etc/iscsi/initiatorname.iscsi 
+   19  iscsiadm --mode node --targetname iqn.2018-19.example.com --portal 192.168.43.43:3260 --login
+   20  iscsiadm --mode node --targetname iqn.2018-19.example.com:acl --portal 192.168.43.43:3260 --login
+   21  iscsiadm --mode discoverydb --type sendtargets --portal 192.168.43.43 --discover
+   22  iscsiadm --mode node --targetname iqn.2018-19.example.com --portal 192.168.43.43 --login
+   23  iscsiadm --mode node --targetname iqn.2018-19.example.com --portal 192.168.43.43:3260 --login
+   24  fdisk -l
+   25  iscsiadm --mode node --targetname iqn.2018-19.example.com --portal 192.168.43.43:3260 --logout
+   26  iscsiadm --mode node --targetname iqn.2018-19.example.com --portal 192.168.43.90:3260 --logout
+   27  df -h
+   28  clear
+   29  iscsiadm --mode discoverydb --type sendtargets --portal 192.168.43.43 --discover
+   30  systemctl restart iscsid.s
+   31  systemctl restart iscsid
+   32  systemctl restart iscsi
+   33  iscsiadm --mode node --targetname iqn.2018-19.example.com --portal 192.168.43.43:3260 --login
+   34  fdisk -l
+   35  fdisk /dev/sdc
+   36  partprobe /dev/sdc
+   37  mkfs.xfs /dev/sdc1
+   38  mkdir /mydata
+   39  blkid /dev/sdc1
+   40  vi /etc/fstab 
+   41  mount -a
+   42  df -h
+   43  clear
+   44  df -h
+   45  clear
+   46  iscsiadm --mode node --targetname iqn.2018-19.example.com --portal 192.168.43.43:3260 --logout
+   47  clear
+   48  iscsiadm --mode node --targetname iqn.2018-19.example.com --portal 192.168.43.43:3260 --login
+   49  fdisk -l
+   50  df -h
+   51  iscsiadm --mode node --targetname iqn.2018-19.example.com --portal 192.168.43.43:3260 --logout
+   52  df -h
+   53  vi /etc/fstab 
+   54  clear
+   55  vi /etc/iscsi/initiatorname.iscsi 
+   56  fdisk -l
+   57  iscsiadm --mode node --targetname iqn.2018-19.example.com --portal 192.168.43.43:3260 --logout
+   58  df -h
+   59  mount -a
+   60  df -h
+   61  iscsiadm --mode node --targetname iqn.2018-19.example.com --portal 192.168.43.43:3260 --logout
+   62  clear
+   63  ls
+   64  ls /
+   65  clear
+   66  mkdir /test
+   67  mount 192.168.43.43:/mydata /test
+   68  cd /test/
+   69  ls
+   70  umount /test/
+   71  df -h
+   72  umount /test/
+   73  umount /test
+   74  umount -a
+   75  df -h
+   76  mount -a
+   77  umount /test
+   78  umount 192.168.43.43:/mydata /test
+   79  umount /test
+   80  cd
+   81  umount /test
+   82  clear
+   83  vi /etc/fstab 
+   84  mount -a
+   85  df -h
+   86  cat /etc/fstab
+   87  vi /etc/fstab 
+   88  rm -rf /test 
+   89  ls /
+   90  ls /t
+   91  cd
+   92  rm -rf /test
+   93  rmdir /test
+   94  cd /test
+   95  df -h
+   96  umount /test
+   97  cd
+   98  ls /
+   99  chmod 777 /test
+  100  vi /etc/fstab 
+  101  ls /tets
+  102  ls /test
+  103  sudo rm -rf /test
+  104  cd
+  105  pvremove /dev/sdb
+  106  cd
+  107  rm -rf /test
+  108  clear
+  109  mount -o //sambaserver.example.com
+  110  mkdir /mydata
+  111  rm -rf /mydata/
+  112  mkdir /mydata
+  113  mount -o //sambaserver.example.com/myshare /mydata/
+  114  mount  //sambaserver.example.com/myshare /mydata/
+  115  clear
+  116  vi /root/sec
+  117  vi /etc/fstab 
+  118  ls /
+  119  cd /mydata/
+  120  ls
+  121  cd 
+  122  vi /etc/fstab 
+  123  mount -a
+  124  df -h
+  125  ls /mydata/
+  126  clear
+  127  df -h
+  128  cat /etc/fstab 
+  129  cat /root/sec
+  130  ls /mydata/
+  131  df -h
+  132  vi /root/sec
+  133  vi /etc/fstab 
+  134  rm -rf /mydata 
+  135  clear
+  136  ls /
+  137  clear
+  138  cd
+  139  clear
+  140  mount -o username=rushi //sambaserver.example.com/impdata /test
+  141  df -h
+  142  umount /test
+  143  df -h
+  144  systemctl restart smb nmb
+  145  df -h
+  146  umount /test
+  147  cd
+  148  iscsiadm --mode discoverydb --type sendtargets --portal 192.168.43.90 --discover
+  149  vi /etc/iscsi/initiatorname.iscsi 
+  150  iscsiadm --mode discoverydb --type sendtargets --portal 192.168.43.90 --discover
+  151  systemctl restart iscsi
+  152  systemctl restart iscsid
+  153  iscsiadm --mode discoverydb --type sendtargets --portal 192.168.43.90 --discover
+  154  iscsiadm --mode node --targetname iqn.2018-19.example.com --portal 192.168.43.90:3260 --login
+  155  fdisk -l
+  156  iscsiadm --mode node --targetname iqn.2018-19.example.com --portal 192.168.43.90:3260 --logout
+  157  fdisk -l
+  158  iscsiadm --mode node --targetname iqn.2018-19.example.com --portal 192.168.43.90:3260 --logout
+  159  fdisk -l
+  160  fdisk /dev/sdb
+  161  partprobe /dev/sdb
+  162  mkfs.xfs /dev/sdb1
+  163  mkdir /iscsidata
+  164  bklind /iscsidata
+  165  blkind /iscsidata
+  166  blkid /iscsidata
+  167  blkid /dev/sdb1
+  168  vi /etc/fstab 
+  169  mount -a
+  170  df -h
+  171  df -h /iscsidata/
+  172  ll /iscsidata/
+  173  umount /iscsidata/
+  174  iscsiadm --mode node --targetname iqn.2018-19.example.com --portal 192.168.43.90:3260 --logout
+  175  vi /etc/iscsi/initiatorname.iscsi 
+  176  systemctl restart iscsi
+  177  systemctl restart iscsid
+  178  cd
+  179  rm -rf /iscsidata/
+  180  cd
+  181  cat /etc/hosts
+  182  clear
+  183  mount 192.168.43.90:nfs1 /nfs2
+  184  df -h
+  185  mount 192.168.43.90:nfs1 /nfs2
+  186  clear
+  187  mount 192.168.43.90:nfs1 /nfs2
+  188  df -h
+  189  vi /etc/fstab 
+  190  mount 192.168.43.90:nfs1 /nfs2
+  191  mount 192.168.43.90:/nfs1 /nfs2
+  192  clear
+  193  rm -rf /nfs2/
+  194  mkdir /test1
+  195  mount 192.168.43.90:/myydata /test1
+  196  mount //192.168.43.90:/myydata /test1
+  197  df -h
+  198  umount /test
+  199  umount /test1
+  200  rm -rf /test
+  201  rm -rf /test1
+  202  clear
+  203  mkdir /raj
+  204  mount 192.168.43.90:/myydata /raj
+  205  vi /etc/fstab 
+  206  mount -a
+  207  vi /etc/fstab 
+  208  reboot
+  209  clear
+  210  mount 192.168.43.90:nfs1 /nfs2
+  211  df -h
+  212  mount 192.168.43.90:nfs1 /nfs2
+  213  clear
+  214  mount 192.168.43.90:nfs1 /nfs2
+  215  df -h
+  216  vi /etc/fstab 
+  217  mount 192.168.43.90:nfs1 /nfs2
+  218  mount 192.168.43.90:/nfs1 /nfs2
+  219  clear
+  220  rm -rf /nfs2/
+  221  mkdir /test1
+  222  mount 192.168.43.90:/myydata /test1
+  223  mount //192.168.43.90:/myydata /test1
+  224  df -h
+  225  umount /test
+  226  umount /test1
+  227  rm -rf /test
+  228  rm -rf /test1
+  229  clear
+  230  mkdir /raj
+  231  mount 192.168.43.90:/myydata /raj
+  232  vi /etc/fstab 
+  233  mount -a
+  234  vi /etc/fstab 
+  235  reboot
+  236  cd
+  237  clear
+  238  mkdir /nfs2
+  239  mount //sambaserver.example.com/nfs1 /nfs2
+  240  df -h
+  241  mount //sambaserver.example.com:nfs1 /nfs2
+  242  df -h
+  243  su
+  244  cd
+  245  man iscsiadm
+  246  vi /etc/iscsi/initiatorname.iscsi 
+  247  systemctl restart iscsid
+  248  systemctl restart iscsi
+  249  iscsiadm --mode discoverydb --type sendtargets --portal 192.168.43.90 --discover
+  250  vi /etc/iscsi/initiatorname.iscsi 
+  251  systemctl restart iscsid
+  252  systemctl restart iscsi
+  253  iscsiadm --mode discoverydb --type sendtargets --portal 192.168.43.90 --discover
+  254  systemctl enable iscsid
+  255  systemctl enable iscsi
+  256  iscsiadm --mode discoverydb --type sendtargets --portal 192.168.43.90 --discover
+  257  vi /etc/iscsi/initiatorname.iscsi 
+  258  systemctl restart iscsid
+  259  systemctl restart iscsi
+  260  iscsiadm --mode discoverydb --type sendtargets --portal 192.168.43.90 --discover
+  261  vi /etc/iscsi/initiatorname.iscsi 
+  262  systemctl restart iscsid
+  263  systemctl restart iscsi
+  264  iscsiadm --mode discoverydb --type sendtargets --portal 192.168.43.90 --discover
+  265  systemctl restart iscsi
+  266  systemctl restart iscsid
+  267  iscsiadm --mode discoverydb --type sendtargets --portal 192.168.43.90 --discover
+  268  cd
+  269  clear
+  270  ls /
+  271  mkdir /test
+  272  systemctl restart iscsid
+  273  systemctl restart iscsi
+  274  systemctl restart iscsid
+  275  systemctl restart iscsi
+  276  vi /etc/iscsi/initiatorname.iscsi 
+  277  systemctl restart iscsid
+  278  systemctl restart iscsi
+  279  iscsiadm --mode discoverydb --type sendtargets --portal 192.168.43.90 --discover
+  280  # iscsiadm --mode node --targetname iqn.2018-19.example.com:system2 --portal 192.168.43.90:3260 --login
+  281  fdisk -l
+  282  # iscsiadm --mode node --targetname iqn.2018-19.example.com:system2 --portal 192.168.43.90:3260 --logout
+  283  fdisk -l
+  284  iscsiadm --mode node --targetname iqn.2018-19.example.com:system2 --portal 192.168.43.90:3260 --login
+  285  iscsiadm --mode node --targetname iqn.2018-19.example.com --portal 192.168.43.90:3260 --login
+  286  fdisk -l
+  287  iscsiadm --mode node --targetname iqn.2018-19.example.com --portal 192.168.43.90:3260 --logout
+  288  fdisk -l
+  289  clear
+  290  fdisk 
+  291  clear
+  292  fdisk -l
+  293  iscsiadm --mode node --targetname iqn.2018-19.example.com --portal 192.168.43.90:3260 --login
+  294  fdisk -l
+  295  vi /etc/iscsi/initiatorname.iscsi 
+  296  iscsiadm --mode node --targetname iqn.2018-19.example.com --portal 192.168.43.90:3260 --login
+  297  fdisk -l
+  298  iscsiadm --mode node --targetname iqn.2018-19.example.com --portal 192.168.43.90:3260 --logout
+  299  man iscsiadm
+  300  iscsiadm --mode node --targetname iqn.2018-19.example.com --portal 192.168.43.90:3260 --logout
+  301  fdisk -l
+  302  clear
+  303  cd
+  304  clear
+  305  vi /etc/iscsi/initiatorname.iscsi ]
+  306  cd
+  307  man iscsadm
+  308  man iscsiadm
+  309  cd
+  310  systemctl restart iscsid
+  311  systemctl restart iscsi
+  312  iscsiadm --mode discoverydb --type sendtargets --portal 192.168.43.90 --discover
+  313  #iscsiadm --mode node --targetname iqn.2018-19.example.com:system1 --portal 192.168.43.90:3260 --login
+  314  iscsiadm --mode node --targetname iqn.2018-19.example.com:system1 --portal 192.168.43.90:3260 --login
+  315  fdisk -l
+  316  iscsiadm --mode node --targetname iqn.2018-19.example.com:system1 --portal 192.168.43.90:3260 --logout
+  317  fdisk -l
+  318  iscsiadm --mode node --targetname iqn.2018-19.example.com:system1 --portal 192.168.43.90:3260 --logout
+  319  fdisk -l
+  320  iscsiadm --mode node --targetname iqn.2018-19.example.com:system1 --portal 192.168.43.90:3260 --login
+  321  iscsiadm --mode node --targetname iqn.2018-19.example.com:system1 --portal 192.168.43.90:3260 --logout
+  322  fdisk -l
+  323  cd
+  324  clear
+  325  man iscsiadm
+  326  cd
+  327  vi /etc/iscsi/initiatorname.iscsi 
+  328  cat /etc/iscsi/initiatorname.iscsi
+  329  cd
+  330  ls /
+  331  rm -rf /test/
+  332  mkdir /test
+  333  clear
+  334  vi /etc/iscsi/initiatorname.iscsi 
+  335  systemctl restart iscsid
+  336  systemctl restart iscsi
+  337  systemctl enable iscsid
+  338  systemctl enable iscsi
+  339  iscsiadm --mode discoverydb --type sendtargets --portal 192.168.43.90 --discover
+  340   iscsiadm --mode node --targetname  iqn.2018-19.example.com:system1 --portal 192.168.43.90:3260 --login
+  341  fdisk -l
+  342   iscsiadm --mode node --targetname  iqn.2018-19.example.com:system1 --portal 192.168.43.90:3260 --logout
+  343  fdisk -l
+  344  iscsiadm --mode node --targetname iqn.2018-19.example.com:system1 --portal 192.168.43.90:3260 --login
+  345  vi /etc/iscsi/initiatorname.iscsi 
+  346  systemctl restart iscsi
+  347  systemctl restart iscsid
+  348  clear
+  349  reboot
+  350  cd
+  351  man iscsiadm
+  352  fdisk -l
+  353  cd
+  354  vi /etc/iscsi/initiatorname.iscsi 
+  355  systemctl restart iscsid
+  356  systemctl restart iscsi
+  357  iscsiadm --mode discoverydb --type sendtargets --portal 192.168.43.90 --discover
+  358  iscsiadm --mode node --targetname iqn.2018-19.example.com:system1 --portal 192.168.43.90:3260 --login
+  359  vi /etc/iscsi/iscsid.conf 
+  360  systemctl restart iscsid
+  361  systemctl restart iscsi
+  362  iscsiadm --mode node --targetname iqn.2018-19.example.com:system1 --portal 192.168.43.90:3260 --login
+  363  vi /etc/iscsi/iscsid.conf 
+  364  vi /etc/iscsi/initiatorname.iscsi 
+  365  systemctl restart iscsid
+  366  systemctl restart iscsi
+  367  systemctl enable iscsid
+  368  systemctl enable iscsi
+  369  iscsiadm --mode node --targetname iqn.2018-19.example.com:system1 --portal 192.168.43.90:3260 --login
+  370  vi /etc/iscsi/iscsid.conf 
+  371  iscsiadm --mode node --targetname iqn.2018-19.example.com:system1 --portal 192.168.43.90:3260 --login
+  372  systemctl restart iscsi
+  373  systemctl restart iscsid
+  374  iscsiadm --mode node --targetname iqn.2018-19.example.com:system1 --portal 192.168.43.90:3260 --login
+  375  clear
+  376  vi /etc/iscsi/initiatorname.iscsi 
+  377  systemctl restart iscsi
+  378  systemctl restart iscsid
+  379  iscsiadm --mode discoverydb --type sendtargets --portal 192.168.43.90 --discover
+  380  iscsiadm --mode node --targetname iqn.2018-19.example.com:system1 --portal 192.168.43.90:3260 --login
+  381  fdisk -l
+  382  iscsiadm --mode node --targetname iqn.2018-19.example.com:system1 --portal 192.168.43.90:3260 --logout
+  383  fdisk -l
+  384  vi /etc/iscsi/iscsid.conf 
+  385  systemctl restart iscsi
+  386  systemctl restart iscsid
+  387  iscsiadm --mode node --targetname iqn.2018-19.example.com:system1 --portal 192.168.43.90:3260 --login
+  388  fdisk -l
+  389  iscsiadm --mode node --targetname iqn.2018-19.example.com:system1 --portal 192.168.43.90:3260 --logout
+  390  vi /etc/iscsi/iscsid.conf 
+  391  systemctl restart iscsi
+  392  systemctl restart iscsid
+  393  iscsiadm --mode node --targetname iqn.2018-19.example.com:system1 --portal 192.168.43.90:3260 --login
+  394  fdisk -l
+  395  iscsiadm --mode node --targetname iqn.2018-19.example.com:system1 --portal 192.168.43.90:3260 --logout
+  396  vi /etc/iscsi/iscsid.conf 
+  397  iscsiadm --mode node --targetname iqn.2018-19.example.com:system1 --portal 192.168.43.90:3260 --logout
+  398  systemctl restart iscsi
+  399  systemctl restart iscsid
+  400  systemctl restart iscsi
+  401  systemctl restart iscsid
+  402  iscsiadm --mode node --targetname iqn.2018-19.example.com:system1 --portal 192.168.43.90:3260 --login
+  403  vi /etc/iscsi/iscsid.conf 
+  404  vi /etc/iscsi/initiatorname.iscsi 
+  405  systemctl restart iscsid
+  406  systemctl restart iscsi
+  407  iscsiadm --mode node --targetname iqn.2018-19.example.com:system1 --portal 192.168.43.90:3260 --login
+  408  fdisk -l
+  409  cd
+  410  iscsiadm --mode node --targetname iqn.2018-19.example.com:system1 --portal 192.168.43.90:3260 --logout
+  411  systemctl restart iscsid
+  412  systemctl restart iscsi
+  413  iscsiadm --mode node --targetname iqn.2018-19.example.com:system1 --portal 192.168.43.90:3260 --logout
+  414  cd
+  415  clear
+  416  cd
+  417  man iscsiadm
+  418  cd
+  419  man iscsiadm
+  420  cd
+  421  ip a
+  422  systemctl restart network
+  423  systemctl status network
+  424  vim /etc/sysconfig/network-scripts/
+  425  vim /etc/sysconfig/network-scripts/ifcfg-ens33 
+  426  ip a
+  427  ping server.example.com 
+  428  curl 192.168.43.90
+  429  curl 192.168.43.90/secure
+  430  ip A
+  431  ip a
+  432  nmcli connection add type team con-name india ifname india config '{"runner":{"name": "activebackup"}}'
+  433  nmcli connection add type team-slave con-name virat ifname ens37 master india 
+  434  nmcli connection add type team-slave con-name dhoni ifname ens38 master india 
+  435  nmcli connection show 
+  436  systemctl restart network
+  437  nmcli connection show 
+  438  teamdctl india state
+  439  nmcli connection modify india ipv4.addresses 192.168.43.5/24
+  440  nmcli connection modify india ipv4.method static
+  441  nmcli connection down india ; nmcli connection up india 
+  442  nmcli connection up virat 
+  443  nmcli connection show 
+  444  ip a
+  445  ping 192.168.43.5
+  446  teamdctl india state
+  447  nmcli connection delete virat 
+  448  nmcli connection delete dhoni 
+  449  nmcli connection delete india 
+  450  nmcli connection show 
+  451  systemctl restart network
+  452  ip a
+  453  mkdir /nfs2\
+  454  mkdir /nfs2
+  455  rm -rf /nfs2/
+  456  mkdir /nfs2
+  457  mount 192.168,43.90:/nfs1 /nfs2
+  458  mount server.example.com:/nfs1 /nfs2
+  459  cd
+  460  vim /etc/hosts
+  461  systemctl restart httpd
+  462  cd
+  463  ip a
+  464  nmcli connection add type team con-name india ifname india config '{"runner":{"name": "activebackup"}}'
+  465  nmcli connection add type team-slave con-name virat ifname ens37 master india 
+  466  nmcli connection add type team-slave con-name dhoni ifname ens38 master india 
+  467  nmcli connection modify india ipv4.addresses 192.168.43.26
+  468  nmcli connection modify india ipv4.method static
+  469  nmcli connection down india ; nmcli connection up india 
+  470  nmcli connection show 
+  471  systemctl restart network
+  472  nmcli connection show 
+  473  teamdctl india state
+  474  nmcli connection up virat 
+  475  nmcli connection up dhoni 
+  476  ip a
+  477  nmcli connection modify india ipv4.addresses 192.168.43.26/24
+  478  ip a
+  479  nmcli connection down india ; nmcli connection up india 
+  480  ip a
+  481  nmcli connection delete virat 
+  482  nmcli connection delete dhoni 
+  483  nmcli connection delete india 
+  484  ip a
+  485  systemctl restart network
+  486  ip a
+  487  mount -o username=om //sambaserver.example.com/myshare /samba2
+  488  df -h
+  489  touch /samba2/redhat1.txt
+  490  umount /samba2/
+  491  vim /etc/fstab 
+  492  mount -a
+  493  df -h
+  494  touch /samba2/redhat2.txt
+  495  umount /samba2/
+  496  mount -o username=om //sambaserver.example.com/myshare /samba2/
+  497  touch /samba2/redhat3.txt
+  498  umount /samba2/
+  499  mount -o username=omkar //sambaserver.example.com/myshare /samba2/
+  500  touch /samba2/redhat3.txt
+  501  umount /samba2/
+  502  vim /root/mysec
+  503  vim /etc/fstab 
+  504  df -h
+  505  mount -a
+  506  df -h
+  507  touch /samba2/redhat4.txt
+  508  umount /samba2/
+  509  vim /root/mysec
+  510  mount -a
+  511  touch /samba2/redhat4.txt
+  512  umount /samba2/
+  513  vim /root/mysec 
+  514  vim /etc/fstab 
+  515  rm -rf /samba2/
+  516  vim /etc/iscsi/initiatorname.iscsi 
+  517  yum install iscsi
+  518  yum install iscsid
+  519   iscsiadm --mode discoverydb --type sendtargets --portal 192.168.43.90 --discover
+  520  vim /etc/iscsi/initiatorname.iscsi 
+  521  systemctl restart iscsid
+  522  systemctl restart iscsi
+  523   iscsiadm --mode discoverydb --type sendtargets --portal 192.168.43.90 --discover
+  524  iscsiadm --mode node --targetname iqn.2001-05.com.doe:test --portal 192.168.1.1:3260 --login
+  525  iscsiadm --mode node --targetname iqn.2018-19.example.com:system1 --portal 192.168.43.90:3260 --login
+  526  fdisk -l
+  527  fdisk /dev/sdb
+  528  partprobe /dev/sdb
+  529  mkfs.ext4 /dev/sdb1
+  530  mkdir /iscsi
+  531  blkid /dev/sdb1
+  532  rm -rf /iscsi
+  533  iscsiadm --mode node --targetname iqn.2018-19.example.com:system1 --portal 192.168.43.90:3260 --logout
+  534  vim /etc/iscsi/initiatorname.iscsi 
+  535  systemctl restart iscsid
+  536  systemctl restart iscsi
+  537  yum remove mariadb* 
+  538  yum install mariadb* -y
+  539  mysql -uomkar -psantosh -h 192.168.43.90
+  540  mysql -uom -psantosh -h 192.168.43.90
+  541  cd
+  542  vim /etc/fstab 
+  543  mount -a
+  544  df -h
+  545  umount /iscsi
+  546  vim /etc/fstab 
+  547  cd
+  548  cat /usr/share/doc/teamd-1.27/example_configs/activebackup_arp_ping_1.conf 
+  549  mkdir /samba2
+  550  man iscsid
+  551  man iscsiadm
+  552  cd
+  553  rm -rf /nfs1/
+  554  mkdir /nfs2
+  555  man iscsiadm
+  556  vim /etc/fstab 
+  557  mount -a
+  558  df -h
+  559  umount /iscsi
+  560  rm -rf /iscsi
+  561  mysqldump -uroot -p rhce1 < /rhce1.sql
+  562  rm /rhce1.sql 
+  563  ls /
+  564  mysqldump -uroot -p rhce1 < /rhce1.sql
+  565  cd
+  566  ip a
+  567  ping server1.example.com 
+  568  ip a
+  569  nmcli connection add type team con-name india ifname india config '{"runner":{"name": "activebackup"}}'
+  570  nmcli connection add type team-slave con-name virat ifname ens37 master india
+  571  nmcli connection add type team-slave con-name dhoni ifname ens38 master india 
+  572  nmcli connection show 
+  573  systemctl restart network
+  574  ip a
+  575  systemctl restart network
+  576  teamdctl restart india
+  577  teamdctl india stae
+  578  teamdctl india state
+  579  nmcli connection modify india ipv4.addresses 192.168.43.21
+  580  nmcli connection modify india ipv4.method static
+  581  nmcli connection down india ; nmcli connection up india 
+  582  nmcli connection up virat 
+  583  nmcli connection up dhoni
+  584  ip a
+  585  nmcli connection delete virat 
+  586  nmcli connection delete dhoni 
+  587  nmcli connection delete india 
+  588  ip a
+  589  systemctl restart network
+  590  ip a
+  591  mkdir /nfs1
+  592  mount server.example.com:/nfs1 /nfs2
+  593  df -h
+  594  ls /nfs2/
+  595  touch /nfs2/redd.txt
+  596  ls /nfs2/
+  597  umount /nfs2/
+  598  rm -rf /nfs2/
+  599  mkdir /samba2
+  600  mount -o username=om //sambaserver.example.com/myshare /samba2
+  601  df -h
+  602  touch /samba2/
+  603  touch /samba2/redhat.txt
+  604  ls /samba2/
+  605  umount /samba2/
+  606  mount -o username=om //sambaserver.example.com/myshare /samba2
+  607  df -h
+  608  ls /samba2/redhat.txt 
+  609  umount /samba2/
+  610  df -h
+  611  mount -o username=omkar //sambaserver.example.com/myshare /samba2
+  612  df -h
+  613  touch /samba2/ted.tx
+  614  touch /samba2/ted.txt
+  615  umount /samba2/
+  616  df -h
+  617  vim /etc/iscsi/initiatorname.iscsi 
+  618  yum install iscsi*
+  619  systemctl restart iscsid
+  620  systemctl restart iscsi
+  621  systemctl enable iscsid
+  622  systemctl enable iscsi
+  623  iscsiadm --mode discoverydb --type sendtargets --portal 192.168.43.90 --discover
+  624  iscsiadm --mode node --targetname iqn.2001-05.com.doe:test --portal 192.168.1.1:3260 --login
+  625  iscsiadm --mode node --targetname iscsiadm --mode node --targetname iqn.2001-05.com.doe:test --portal 192.168.1.1:3260 --login --portal 192.168.43.90:3260 --login
+  626  iscsiadm --mode node --targetname iqn.2001-05.com.doe:test --portal 192.168.1.1:3260 --login
+  627  iscsiadm --mode node --targetname iqn.2018-19.example.com:system2 --portal 192.168.43.90:3260 --login
+  628  iscsiadm --mode node --targetname iqn.2018-19.example.com:system1 --portal 192.168.43.90:3260 --login
+  629  fdisk -l
+  630  fdisk /dev/sdb
+  631  partprobe /dev/sdb
+  632  mkfs.xfs /dev/sdb1
+  633  mkfs.xfs -f /dev/sdb1
+  634  mkdir /iscsi
+  635  blkid /dev/sdb1
+  636  iscsiadm --mode node --targetname iqn.2018-19.example.com:system1 --portal 192.168.43.90:3260 --logout
+  637  fdisk -l
+  638  iscsiadm --mode node --targetname iqn.2018-19.example.com:system1 --portal 192.168.43.90:3260 --login
+  639  fdisk -l
+  640  fdisk /dev/sdb1
+  641  partprobe /dev/sdb
+  642  fdisk -l
+  643  fdisk /dev/sdb
+  644  partprobe /dev/sdb
+  645  fdisk -l
+  646  iscsiadm --mode node --targetname iqn.2018-19.example.com:system1 --portal 192.168.43.90:3260 --logout
+  647  fdisk -l
+  648  yum remove iscsi*
+  649  yum remove iscsid
+  650  yum remove iscsi
+  651  yum remove iscsi-initiator-utils
+  652  lab smtp-nullclient setup
+  653  yum install mariadb* -y
+  654  mysql -uroot -p
+  655  mysql -uroot 
+  656  systemctl restart mariadb
+  657  systemctl enable mariadb
+  658  mysql -uroot 
+  659  mysql -uroot -p
+  660  mysql_secure_installation 
+  661  mysql -uroot -psantosh
+  662  mysqldump rhce1 > /rhce1.sql
+  663  mysql -uroot -p mysqldump rhce1 > /rhce1.sql
+  664  ls /
+  665  mysql -uroot -psantosh
+  666  mysql -uroot -p mysqldump rhce1 > /rhce1.sql
+  667  mysql -uroot -p rhce1 > /rhce1.sql
+  668  systemctl restart mariadb
+  669  mysql -uroot -p rhce1 < /rhce1.sql
+  670  mysql -uroot -p rhce1 > /rhce1.sql
+  671  mysqldump -uroot rhce1 < /rhce1.sql
+  672  mysqldump -uroot -p rhce1 < /rhce1.sql
+  673  mysql -uroot -psantosh
+  674  mysqldump -uroot -p rhce1 < /rhce1.sql
+  675  mysql -uroot -psantosh
+  676  mysqldump -uroot -p rhce1 < /rhce1.sql
+  677  mysql -uroot -psantosh
+  678  mysqldump -uroot -p rhce1 > /rhce1.sql
+  679  mysql -uroot -psantosh
+  680  mkdir /data1
+  681  mount server.example.com:/raj /data1
+  682  df -h
+  683  touch /data1/redhatRaj.txt
+  684  umount /data1/
+  685  mkdir /samba2
+  686  rm -rf /samba2/
+  687  mkdir /samba2
+  688  mount -o username=raj //sambaserver.example.com/myshare /samba2/
+  689  df -h
+  690  touch /samba2/reddddddd.txt
+  691  ls /samba2/
+  692  umount /samba2/
+  693  mount -o username=rushi //sambaserver.example.com/myshare /samba2/
+  694  df -h
+  695  touch /samba2/reddddddd.txt
+  696  umount /samba2/
+  697  vim /root/sec
+  698  ls -l /root/
+  699  ls -ld
+  700  ls -ld /root
+  701  touch /sec
+  702  ls /sec 
+  703  ll /sec 
+  704  rm /sec
+  705  vim /etc/fstab 
+  706  yum install samba-client cifs-utils
+  707  mount -a
+  708  df -h
+  709  touch /samba2/ree.txt
+  710  ls /samba2/ree.txt
+  711  umount /samba2/
+  712  vim /root/sec
+  713  mount /samba2/
+  714  df -h
+  715  ls /samba2/ree.txt
+  716  touch /samba2/ree.txt
+  717  umoun /samba2/
+  718  umount /samba2/
+  719  vim /etc/iscsi/initiatorname.iscsi 
+  720  iscsiadm --mode discoverydb --type sendtargets --portal 192.168.43.90 --discover
+  721  yum install iscsi
+  722  yum install iscsi*
+  723  iscsiadm --mode discoverydb --type sendtargets --portal 192.168.43.90 --discover
+  724  iscsiadm --mode node --targetname iqn.2018-19.example.com:system1 --portal 192.168.43.90:3260 --login
+  725  fdisk -l
+  726  mkfs.xs /dev/sdb
+  727  mkfs.xfs /dev/sdb
+  728  blkid /dev/sdb
+  729  mkdir /iscsi-data/
+  730  mkdir /os11
+  731  vim /etc/fstab 
+  732  mount -a
+  733  df -h
+  734  umount /os11/
+  735  rm -rf /os11/
+  736  rm -rf /iscsi-data/
+  737  vim /etc/fstab 
+  738  df -h
+  739  umount /samba2/
+  740  df -h
+  741  iscsiadm --mode node --targetname iqn.2018-19.example.com:system1 --portal 192.168.43.90:3260 --logout
+  742  fdisk -l 
+  743  vim /etc/iscsi/initiatorname.iscsi 
+  744  systemctl restart iscsid
+  745  systemctl restart iscsi
+  746  cd
+  747  yum remove samba-client* cifs-utils* -y
+  748  yum clean all
+  749  ip a
+  750  yum clean all
+  751  ip a
+  752  reboot
+  753  cd
+  754  yum remove iscsi*
+  755  yum remove samba-client cifs-utils* -y
+  756  yum remove postfix* -y
+  757  ls /
+  758  rm /rhce1.sql 
+  759  vim /etc/iscsi/initiatorname.iscsi 
+  760  exportfs -rv
+  761  yum install samba-client cifs-utils* -y
+  762  mkdir /samba1
+  763  mount -o username=samual //server6.example.com/ARTIST /samba1/
+  764  df -h
+  765  su - samual
+  766  useradd samual
+  767  su - samual
+  768  umount /samba1
+  769  mount -o username=samual //server6.example.com/ARTIST /samba1/
+  770  df -h
+  771  vim /etc/fstab 
+  772  mount -av
+  773  df -h
+  774  vim /etc/fstab 
+  775  mount -av
+  776  df -h
+  777  useradd catherine
+  778  su - catherine
+  779  su - mitchel
+  780  useradd mitchel
+  781  su - mitchel
+  782  yum install httpd* -y
+  783  vim /etc/hosts
+  784  yum install mod_ssl* -y
+  785  man req
+  786  man x509
+  787  cd /etc/httpd/conf.d/
+  788  ls
+  789  cp ssl.conf myssl.conf
+  790  vim myssl.conf 
+  791  httpd -t
+  792  systemctl restart httpd
+  793  curl https://server6.example.com
+  794  vim myssl.conf 
+  795  systemctl restart httpd
+  796  vim myssl.conf 
+  797  systemctl restart httpd
+  798  vim myssl.conf 
+  799  httpd -t
+  800  echo "Hhhhh" > /var/www/html/index.html
+  801  mv myssl.conf /
+  802  systemctl restart httpd
+  803  cp /myssl.conf .
+  804  vim myssl.conf 
+  805  systemctl restart httpd
+  806  vim myssl.conf 
+  807  systemctl restart httpd
+  808  cd
+  809  curl https://desktop6.example.com
+  810  cd /etc/httpd/conf.d/
+  811  vim myssl.conf 
+  812  systemctl restart httpd
+  813  vim myssl.conf 
+  814  systemctl restart httpd
+  815  firewall-cmd --permanent --add-service=https
+  816  firewall-cmd --reload 
+  817  vim myssl.conf 
+  818  echo "This is ssl" > /var/www/html/index.html 
+  819  cd
+  820  yum install targetcli
+  821  systemctl restart target
+  822  systemctl enable target
+  823  lsblk
+  824  history
+[root@desktop6 ~]# 
